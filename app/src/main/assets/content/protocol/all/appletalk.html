@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>AppleTalk</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>AppleTalk</h3>
+
+		<p><strong>AppleTalk</strong> — стек протоколов, разработанных Apple Computer для компьютерной сети. Он был изначально включён в Macintosh (1984), но потом компания отказалась от него в пользу TCP/IP.</p>
+
+		<hr><h3>Основные сведения</h3>
+
+		<p><strong>Сеансовый уровень</strong></p>
+
+		<p>Соответствующая сеансовому уровню модели OSI версия AppleTalk состоит из пяти протоколов, поддерживающих полностью дуплексную передачу данных, преобразование логических названий в адреса, доступ к принтеру, переупорядочение пакетов и т. д.</p>
+
+		<p>Первый протокол сеансового уровня называется протоколом потоков данных (AppleTalk Data Stream Protocol — ADSP). Протокол ADSP предоставляет полностью дуплексные услуги, ориентированные на установление соединения и характеризующиеся высокой степенью надёжности. Такая надёжность достигается путём установления логического соединения (сеанса) между двумя взаимодействующими процессами на клиентских машинах. Протокол ADSP позволяет управлять этим соединением, обеспечивая контроль потока данных, переупорядочение пакетов и рассылку подтверждений о приёме пакетов. Для установления логического соединения между процессами используются номера сокетов. После установления соединения две системы могут начать обмен данными.</p>
+
+		<p>Следующим протоколом сеансового уровня AppleTalk является собственно сеансовый протокол (AppleTalk Session Protocol — ASP). Протокол ASP обеспечивает надёжную доставку данных, используя для этого ориентированное на корректность принятых последовательностей управление сеансом (sequence-oriented session management), и предоставляет доступ к транспортным услугам протокола транспортного уровня AppleTalk Transport Protocol (ATP).</p>
+
+		<p>Протокол маршрутизации с обновлением среды AppleTalk (AppleTalk Update-Based Routing Protocol — AURP) используется в больших сетях AppleTalk и применяется в основном для маршрутизации и поддержки обмена информацией между маршрутизирующими устройствами, в частности, между маршрутизаторами Exterior Gateway.</p>
+
+		<p>Кроме того, в состав сеансового уровня AppleTalk входит протокол доступа к принтеру (Printer Access Protocol — PAP). Несмотря на то что первоначально протокол РАР был разработан для управления доступом к сетевым принтерам, он может использоваться для обеспечения обмена данными между разнообразными устройствами. Между устройствами устанавливается двунаправленное соединение и одновременно осуществляется управление потоком данных и контроль последовательности пакетов.</p>
+
+		<p>И, наконец, последний протокол сеансового уровня AppleTalk, — протокол зонной информации (Zone Information Protocol — ZIP). Протокол ZIP предоставляет механизм логического группирования отдельных сетевых устройств с помощью «дружественных» имён. Такие логические группы называются зонами (zones). В расширенной сети компьютеры могут охватывать несколько сетей, но оставаться при этом логически сгруппированными в одну зону. Однако в небольших, нерасширенных сетях может быть определена единственная зона.</p>
+
+		<p>Пять протоколов сеансового уровня AppleTalk предоставляют клиентам возможность устанавливать логическое соединение и обмениваться данными между компьютерами вне зависимости от расстояния между ними.</p>
+
+		<p><strong>Транспортный уровень</strong></p>
+
+		<p>Для преобразования названия зон в номера сетей и узлов ZIP использует протокол связывания имён (Name Binding Protocol — NBP), принадлежащий транспортному уровню. Для рассылки данных об изменении конфигурации зоны используется протокол АТР.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

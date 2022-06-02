@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Megaco/H.248</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Megaco/H.248</h3>
+
+		<p><strong>H.248</strong> (ранее также <strong>MEGACO</strong>) — протокол используемый между элементами телекоммуникационных сетей: шлюзом (Media Gateway) и контроллером шлюзов (Media Gateway Controller). Поддерживает различные системы сигнализации сетей с коммутацией каналов, включая тоновую сигнализацию, ISDN, ISUP, QSIG и GSM. Закреплен как стандартный протокол IMS, наряду с SIP и Diameter.</p>
+
+		<hr><h3>История</h3>
+
+		<p>Протокол разрабатывался 16-й группой ITU-T с 1997 года по 2000 год и был утверждён 15 июня 2000 года. Стандартизован рекомендациями ITU-T с H.248.1 (основное описание протокола) по H.248.88 (наборы пакетов).</p>
+
+		<p>Аналогичный протокол, разработанный IETF в 2000 году и дополненный в 2003 имел название MEGACO (RFC 3015 и RFC 3525). Многие черты MEGACO получил от протокола управления шлюзами MGCP. В 2008 году специалисты IETF в RFC 5125 перевели MEGACO (и соответствующий RFC 3525) в статус исторического наследия, оставив приоритет за стандартом H.248.</p>
+
+		<hr><h3>Принципы работы</h3>
+
+		<p>Каждое сообщение является транспортным механизмом передачи команд, а не самой командой, в отличие от большинства прочих телекоммуникационных протоколов.</p>
+		
+		<p>Команды протокола:</p>
+		
+		<ol>
+			<li>Add</li>
+			<li>Move</li>
+			<li>Substract</li>
+			<li>Notify</li>
+			<li>Modify</li>
+			<li>AuditValue</li>
+			<li>AuditCapabilites</li>
+			<li>ServiceChange</li>
+		</ol>
+
+		<hr><h3>Архитектура</h3>
+
+		<p><strong>С точки зрения сообщения</strong>:</p>
+
+		<p>Сообщение { Транзакция{ Действие{ Контекст{ Команда{ Окончание{ Дескриптор{ Пакет }}}}}}}</p>
+
+		<p><strong>С точки зрения передачи по пакетной сети (также может передаваться поверх ATM)</strong>:</p>
+
+		<ul>
+			<li>H.248</li>
+			<li>TCP / UDP / SCTP</li>
+			<li>IP</li>
+			<li>Ethernet</li>
+		</ul>
+
+		<hr><h3>Сравнение с MGCP</h3>
+
+		<p>Ниже представлены общие аспекты и различия между Megaco/H.248 и MGCP:</p>
+
+		<table width="100%">
+			<tr>
+				<td><strong>H.248/Megaco</strong></td>
+				<td><strong>MGCP</strong></td>
+			</tr>
+			<tr>
+				<td>Вызов представляется как терминация (завершение) контекста</td>
+				<td>Вызов представляется конечным устройством с соединением</td>
+			</tr>
+			<tr>
+				<td>Возможные типы вызовов включают в себя любую комбинацию мультимедиа и конференц-связи</td>
+				<td>Возможные типы вызовов это только точка-точка или многоточка</td>
+			</tr>
+			<tr>
+				<td>Синтаксис текстовый или бинарный</td>
+				<td>Синтаксис текстовый</td>
+			</tr>
+			<tr>
+				<td>Транспортный уровень TCP, UDP или SCTP</td>
+				<td>Транспортный уровень - UDP</td>
+			</tr>
+			<tr>
+				<td>Стандартный протокол управления медиа-шлюзом (Media Gateway Control)</td>
+				<td>IETF статус - Информационный. MGCP не определяет какого-либо Интернет-стандарта</td>
+			</tr>
+			<tr>
+				<td>Определён ITU (в прошлом разрабатывался совместно IETF и ITU)</td>
+				<td>Управляется индустрией. Множество компаний имеют собственную реализацию MGCP</td>
+			</tr>
+		</table>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

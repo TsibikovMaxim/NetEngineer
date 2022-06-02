@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>RTSP</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>RTSP</h3>
+
+		<p>Потоковый протокол реального времени (англ. real time streaming protocol, сокр. RTSP) — прикладной протокол, предназначенный для использования в системах, работающих с мультимедийными данными (мультимедийным содержимым, медиасодержимым), и позволяющий удалённо управлять потоком данных с сервера, предоставляя возможность выполнения команд, таких как запуск (старт), приостановку (пауза) и остановку (стоп) вещания (проигрывания) мультимедийного содержимого, а также доступа по времени к файлам, расположенным на сервере. Разработан IETF в 1998 году и описан в RFC 2326.</p>
+
+		<p>RTSP не выполняет сжатие, а также не определяет метод инкапсуляции мультимедийных данных и транспортные протоколы. Передача потоковых данных сама по себе не является частью протокола RTSP. Большинство серверов RTSP используют для этого стандартный транспортный протокол реального времени, осуществляющий передачу аудио- и видеоданных.</p>
+
+		<hr><h3>Описание</h3>
+
+		<p>По синтаксису и операциям протокол похож на HTTP. Однако между протоколами RTSP и HTTP есть ряд существенных различий. Одно из основных заключается в том, что в первом и сервер, и клиент способны генерировать запросы. Например, видеосервер может послать запрос для установки параметров воспроизведения определенного видеопотока. Также протоколом RTSP предусматривается, что управление состоянием или связью должен осуществлять сервер, тогда как HTTP вообще никакого отношения к этому не имеет. Наконец, в RTSP данные могут передаваться вне основной полосы (англ. out of band) другими протоколами, например RTP, что невозможно в случае HTTP.</p>
+
+		<p>RTSP-сообщения посылаются отдельно от мультимедийного потока. Для них используется соединение по специальному порту, по умолчанию с номером 554. Запрос на сервер посылается в текстовом виде в формате: <strong>метод <абсолютный_адрес>[/медиасодержимое] <версия_протокола></strong>. Вместе с запросом могут быть переданы дополнительные служебные поля (на новых строках запроса).</p>
+
+		<p>Методы протокола:</p>
+
+		<ul>
+			<li>describe — запрос описания содержимого, например, в формате SDP;</li>
+			<li>options — запрос поддерживаемых методов;</li>
+			<li>play — запрос начала вещания содержимого;</li>
+			<li>pause — запрос временной остановки вещания;</li>
+			<li>record — запрос на записывание содержимого сервером;</li>
+			<li>redirect — перенаправление на другое содержимое;</li>
+			<li>setup — запрос установки транспортного механизма для содержимого;</li>
+			<li>announce — обновление данных описания содержимого;</li>
+			<li>get_parameter — запрос указанных параметров у сервера;</li>
+			<li>set_parameter — установка параметров сервера;</li>
+			<li>teardown — остановка потока и освобождение ресурсов.</li>
+		</ul>
+
+		<p>Пример запроса: PLAY rtsp://example.com/video/test.mpg/streamid=0 RTSP/1.0</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>IPX</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>IPX</h3>
+
+		<p><strong>IPX</strong> (internetwork packet exchange — межсетевой обмен пакетами) — протокол сетевого уровня модели OSI в стеке протоколов IPX/SPX. Предназначен для передачи датаграмм. Для передачи данных установки соединения не требуется (так же, как для IP и NetBIOS). Обеспечивает связь между серверами с сетевой операционной системы NetWare и конечными станциями.</p>
+
+		<p>Стек протоколов IPX/SPX был разработан компанией «Novell» для её проприетарной сетевой ОС NetWare. За основу IPX был взят протокол IDP из стека протоколов Xerox Network Services.</p>
+
+		<p>С конца 1980-х и до середины 1990-х годов сети на основе IPX были широко распространены из-за большой популярности сетевой ОС NetWare. Однако в дальнейшем с развитием интернета и стека TCP/IP оригинальный транспортный протокол SPX от «Novell» не способствовал успеху IPX-сетей. Из-за стремительного роста популярности сетей на основе TCP/IP в настоящее время протокол IPX имеет шансы исчезнуть.</p>
+
+		<p>В качестве адреса хоста IPX использует идентификатор, образованный из четырёхбайтного номера сети (назначаемого маршрутизаторами) и MAC-адреса сетевого адаптера.</p>
+
+		<hr><h3>IPX адресация</h3>
+
+		<ul>
+			<li>Логическим сетям присваивается уникальный 32-разрядный адрес в диапазоне 0x1 - 0xFFFFFFFE.</li>
+			<li>Хосты имеют 48-разрядный адрес узла, являющийся MAC-адресом сетевого адаптера. Адрес узла добавляется к адресу сети для создания уникального идентификатора хоста в сети.</li>
+			<li>Номер сети 00:00:00:00 означает текущую сеть.</li>
+			<li>Широковещательный адрес — FF:FF:FF:FF.</li>
+		</ul>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

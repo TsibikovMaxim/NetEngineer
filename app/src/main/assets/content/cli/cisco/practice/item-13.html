@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Настройка DHCP пула</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Настройка DHCP пула</h3>
+
+		<p>Протокол DHCP (Dynamic Host Configuration Protocol) позволяет всем сетевым устройствам в автоматическом режиме получать IP-адреса и другие параметры необходимые для работы в сети. Протокол DHCP работает по модели Клиент-Сервер.</p>
+
+		<hr>
+
+		<p><strong>Switch&gt;en</strong> // Привилегированный режим EXEC<br>
+		<strong>Switch#conf t</strong> // Режим глобальной конфигурации<br>
+		<strong>Switch(config)#ip dhcp pool 404</strong> // создаём новый пул с именем 404<br>
+		<strong>Switch(dhcp-config)#network 172.23.2.0 255.255.255.0</strong> // Указываем сеть, адреса которой будут присваиваться устройствам<br>
+		<strong>Switch(dhcp-config)#default-router 172.23.2.1</strong> // Указываем IP-адрес шлюза<br>
+		<strong>Switch(dhcp-config)#dns-server 8.8.8.8</strong> // Указываем IP-адрес dns сервера<br>
+		<strong>Switch(dhcp-config)#lease 3 12 0</strong> // Указываем срок аренды IP-адреса (дд-чч-мм) для устройства<br>
+		<strong>Switch(dhcp-config)#domain-name test.ru</strong> // Указываем адрес домена<br>
+		<strong>Switch(dhcp-config)#ex</strong> // Выходим из режима конфигурации dhcp пула<br>
+		<strong>Switch(config)#ip dhcp excluded-address 172.23.2.10</strong> // Указываем IP-адреса, которые нельзя присваивать в автоматическом режиме (в основном это статические адреса для факсов, принтеров и т.д)</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

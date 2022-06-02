@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Основные нормируемые характеристики</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Основные нормируемые характеристики</h3>
+
+		<ul>
+			<li>Волновое сопротивление</li>
+			<li>Погонное ослабление на разных частотах</li>
+			<li>Погонная ёмкость</li>
+			<li>Погонная индуктивность</li>
+			<li>Коэффициент укорочения</li>
+			<li>Диаметр центральной жилы</li>
+			<li>Внутренний диаметр экрана</li>
+			<li>Внешний диаметр оболочки</li>
+			<li>Коэффициент стоячей волны</li>
+			<li>Максимальная передаваемая мощность</li>
+			<li>Максимальное допустимое напряжение</li>
+			<li>Минимальный радиус изгиба кабеля</li>
+		</ul>
+
+		<p><strong>Номограмма для определения волнового сопротивления кабеля.</strong></p>
+
+		<center><img src="../../../../images/line/copper/coaxial/item-5.6.jpg"></center>
+
+		<p><strong>Расчёт характеристик</strong></p>
+
+		<p>Определение погонной ёмкости, погонной индуктивности и волнового сопротивления коаксиального кабеля по известным геометрическим размерам проводится следующим образом.</p>
+
+		<p>Сначала необходимо измерить внутренний диаметр D экрана, сняв защитную оболочку с конца кабеля и завернув оплетку (внешний диаметр внутренней изоляции). Затем измеряют диаметр d центральной жилы, сняв предварительно изоляцию. Третий параметр кабеля, который необходимо знать для определения волнового сопротивления, — диэлектрическая проницаемость ε материала внутренней изоляции.</p>
+
+		<p>Погонная ёмкость C<sub>h</sub> (в Международной системе единиц (СИ), результат выражен в фарадах на метр) вычисляется по формуле ёмкости цилиндрического конденсатора:</p>
+
+		<center><img src="../../../../images/line/copper/coaxial/item-5.1.svg"></center>
+
+		<p>где ε<sub>0</sub> — электрическая постоянная.</p>
+
+		<p>Погонная индуктивность L<sub>h</sub> (в системе СИ, результат выражен в генри на метр) вычисляется по формуле</p>
+
+		<center><img src="../../../../images/line/copper/coaxial/item-5.2.svg"></center>
+
+		<p>где μ<sub>0</sub> — магнитная постоянная, μ — относительная магнитная проницаемость изоляционного материала, которая во всех практически важных случаях близка к 1.</p>
+
+		<p>Волновое сопротивление коаксиального кабеля в системе СИ:</p>
+
+		<center><img src="../../../../images/line/copper/coaxial/item-5.3.svg"></center>
+
+		<p>(приближённое равенство справедливо в предположении, что μ = 1).</p>
+
+		<p>Волновое сопротивление коаксиального кабеля можно также определить по номограмме, приведённой на рисунке. Для этого необходимо соединить прямой линией точки на шкале D/d (отношения внутреннего диаметра экрана и диаметра внутренней жилы) и на шкале ε (диэлектрической проницаемости внутренней изоляции кабеля). Точка пересечения проведённой прямой со шкалой R номограммы соответствует искомому волновому сопротивлению.</p>
+
+		<p>Скорость распространения сигнала в кабеле вычисляется по формуле</p>
+
+		<center><img src="../../../../images/line/copper/coaxial/item-5.4.svg"></center>
+
+		<p>где c — скорость света. При измерениях задержек в трактах, проектировании кабельных линий задержек и т. п. бывает полезно выражать длину кабеля в наносекундах, для чего используется обратная скорость сигнала, выраженная в наносекундах на метр: 1/v = √ε·3,33 нс/м.</p>
+
+		<p>Предельное электрическое напряжение, передаваемое коаксиальным кабелем, определяется электрической прочностью S изолятора (в вольтах на метр), диаметром внутреннего проводника (поскольку максимальная напряжённость электрического поля в цилиндрическом конденсаторе достигается возле внутренней обкладки) и в меньшей степени диаметром внешнего проводника:</p>
+
+		<center><img src="../../../../images/line/copper/coaxial/item-5.5.svg"></center>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Законы Кирхгофа</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Законы Кирхгофа</h3>
+
+		<p>Законы Кирхгофа устанавливают соотношения между токами и напряжениями в разветвленных электрических цепях произвольного типа. Законы Кирхгофа имеют особое значение в электротехнике из-за своей универсальности, так как пригодны для решения любых электротехнических задач. Законы Кирхгофа справедливы для линейных и нелинейных цепей при постоянных и переменных напряжениях и токах.</p>
+
+		<p><strong>Первый закон Кирхгофа</strong> вытекает из закона сохранения заряда. Он состоит в том, что алгебраическая сумма токов, сходящихся в любом узле, равна нулю.</p>
+
+		<center><img src="../../../images/electronics/law/item-3.1.png"></center>
+
+		<p>где – число токов, сходящихся в данном узле. Например, для узла электрической цепи (рис. 1) уравнение по первому закону Кирхгофа можно записать в виде I1 - I2 + I3 - I4 + I5 = 0</p>
+
+		<center><img src="../../../images/electronics/law/item-3.2.png"></center>
+
+		<p>В этом уравнении токи, направленные к узлу, приняты положительными.</p>
+
+		<p>Физически первый закон Кирхгофа – это закон непрерывности электрического тока.</p>
+
+		<p><strong>Второй закон Кирхгофа</strong>: алгебраическая сумма падений напряжений на отдельных участках замкнутого контура, произвольно выделенного в сложной разветвленной цепи, равна алгебраической сумме ЭДС в этом контуре.</p>
+
+		<center><img src="../../../images/electronics/law/item-3.3.png"></center>
+
+		<p>где k – число источников ЭДС; m – число ветвей в замкнутом контуре; Ii, Ri – ток и сопротивление i-й ветви.</p>
+
+		<center><img src="../../../images/electronics/law/item-3.4.png"></center>
+
+		<p>Так, для замкнутого контура схемы (рис. 2) Е1 - Е2 + Е3 = I1R1 - I2R2 + I3R3 - I4R4</p>
+
+		<p>Замечание о знаках полученного уравнения:</p>
+
+		<ol>
+			<li>1) ЭДС положительна, если ее направление совпадает с направлением произвольно выбранного обхода контура;</li>
+			<li>2) падение напряжения на резисторе положительно, если направление тока в нем совпадает с направлением обхода.</li>
+		</ol>
+
+		<p>Физически второй закон Кирхгофа характеризует равновесие напряжений в любом контуре цепи.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

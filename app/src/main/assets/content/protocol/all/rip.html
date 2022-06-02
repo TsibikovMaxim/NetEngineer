@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>RIP</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>RIP</h3>
+
+		<p><strong>Протокол маршрутной информации</strong> (англ.  Routing Information Protocol) — один из самых простых протоколов маршрутизации. Применяется в небольших компьютерных сетях, позволяет маршрутизаторам динамически обновлять маршрутную информацию (направление и дальность в хопах), получая ее от соседних маршрутизаторов.</p>
+
+		<hr><h3>История</h3>
+
+		<p>Алгоритм маршрутизации RIP (алгоритм Беллмана — Форда) был впервые разработан в 1969 году, как основной для сети ARPANET.</p>
+
+		<p>Прототип протокола RIP — Gateway Information Protocol, часть пакета PARC Universal Packet.</p>
+
+		<p>Версия RIP, которая поддерживает протокол интернета была включена в пакет BSD операционной системы Unix под названием routed (route daemon), а также многими производителями, реализовавшими свою версию этого протокола. В итоге протокол был унифицирован в документе RFC 1058.</p>
+
+		<p>В 1994 году был разработан протокол RIP-2 (RFC 2453), который является расширением протокола RIP, обеспечивающим передачу дополнительной маршрутной информации в сообщениях RIP и повышающим уровень безопасности.</p>
+
+		<p>Для работы в среде IPv6 была разработана версия RIPng.</p>
+
+		<hr><h3>Техническая информация</h3>
+
+		<p>RIP — так называемый протокол дистанционно-векторной маршрутизации, который оперирует транзитными участками в качестве метрики маршрутизации. Максимальное количество хопов, разрешенное в RIP — 15 (метрика 16 означает «бесконечно большую метрику»). Каждый RIP-маршрутизатор по умолчанию вещает в сеть свою полную таблицу маршрутизации раз в 30 секунд, довольно сильно нагружая низкоскоростные линии связи. RIP работает на 3 уровне (сетевой) стека TCP/IP, используя UDP порт 520.</p>
+
+		<p>В современных сетевых средах RIP — не самое лучшее решение для выбора в качестве протокола маршрутизации, так как его возможности уступают более современным протоколам, таким как EIGRP, OSPF. Ограничение на 15 хопов не дает применять его в больших сетях. Преимущество этого протокола — простота конфигурирования.</p>
+
+		<p><strong>Формат RIP пакета</strong></p>
+
+		<center><img src="../../../images/protocol/rip.png"></center>
+
+		<ul>
+			<li>Command — команда, определяет назначение датаграммы (1 — request; 2 — response)</li>
+			<li>Version — номер версии, в зависимости от версии, определяется формат пакета</li>
+			<li>Routing Domain — идентификатор RIP-системы, к которой принадлежит данное сообщение; часто — номер автономной системы. Используется, когда к одному физическому каналу подключены маршрутизаторы из нескольких автономных систем, в каждой автономной системе поддерживается своя таблица маршрутов. Поскольку сообщения RIP рассылаются всем маршрутизаторам, подключенным к сети, требуется различать сообщения, относящиеся к «своей» и «чужой» автономным системам. Поле использовалось короткое время в версии протокола RIP-2. В протоколе RIP-1 и в текущей версии RIP-2 не используется.</li>
+			<li>RIP Entry (RTE) — запись маршрутной информации RIP. RIP пакет может содержать от 1 до 25 записей RIP Entry.</li>
+		</ul>
+
+		<p><strong>Формат RIP Entry для протокола RIP-1</strong></p>
+
+		<p>Поле <strong>Version</strong> = 1.</p>
+
+		<center><img src="../../../images/protocol/rip2.png"></center>
+
+		<ul>
+			<li>Address family identifier (AFI) — тип адреса, обычно поддерживается только запись AF_INET, которое равно 2 (т. е. используется для протокола IP).</li>
+			<li>Must be zero — должно быть нулём.</li>
+			<li>IPv4 address — IP адрес места назначения (хост или сеть)</li>
+			<li>Metric — метрика маршрута</li>
+		</ul>
+
+		<p><strong>Формат RIP Entry для протокола RIP-2</strong></p>
+
+		<p>Поле <strong>Version</strong> = 2.</p>
+
+		<center><img src="../../../images/protocol/rip3.png"></center>
+
+		<ul>
+			<li>Address Family Identifier (AFI) — тип адреса, обычно поддерживается только запись AF_INET, которое равно 2 (т.е. используется для протокола IP).</li>
+			<li>Route Tag (RT) — тег маршрута. Предназначен для разделения «внутренних» маршрутов от «внешних», взятых, например, из другого IGP или EGP.</li>
+			<li>IP Address — IP адрес места назначения.</li>
+			<li>Subnet Mask — маска подсети</li>
+			<li>Next Hop — следующий хоп. Содержит IP адрес маршрутизатора к месту назначения. Значение 0.0.0.0 — хопом к месту назначения является отправитель пакета. Необходимо, если протокол RIP не может быть запущен на всех маршрутизаторах.</li>
+			<li>Metric — метрика маршрута.</li>
+		</ul>
+
+		<p><strong>Аутентификация</strong></p>
+
+		<p>При включенной аутентификации производится обработка только тех сообщений, которые содержат правильный аутентификационный код. Это используется для повышения безопасности передачи RIP пакетов. Есть возможность шифровать аутентификационный код с помощью MD5.</p>
+
+		<center><img src="../../../images/protocol/rip4.png"></center>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

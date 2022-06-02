@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Порты</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>0-500</h1>
+		<a href="../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<p><strong>Порт/Протокол</strong> - <strong>Описание</strong></p>
+		
+		<div data-filter="true" data-filter-placeholder="Номер порта.." data-insert="true">
+
+			<p><strong>0/TCP,UDP</strong> - резерв (допустимо использование в качестве значения порта источника, если отправляющий процесс не ожидает ответных сообщений).</p>
+			<p><strong>1/TCP,UDP</strong> - TCPMUX (TCP Port Service Multiplexer) — для обслуживания нескольких служб через один TCP-порт.</p>
+			<p><strong>2/TCP,UDP</strong> - COMPRESSNET, процесс управления.</p>
+			<p><strong>3/TCP,UDP</strong> - COMPRESSNET, процесс сжатия.</p>
+			<p><strong>5/TCP,UDP</strong> - RJE (Remote Job Entry) — обслуживает отправку файлов и вывод отчётов при работе рабочей станции с мейнфреймами.</p>
+			<p><strong>7/TCP,UDP</strong> - ECHO — предназначен для тестирования связи путём отправки данных на сервер и получения от него их же в неизменном виде.</p>
+			<p><strong>9/TCP,UDP</strong> - DISCARD — предназначен для тестирования связи путём отправки данных на сервер, который отбрасывает принятое, не отправляя никакого ответа. Также используется для Wake-on-LAN-удалённого включения компьютера.</p>
+			<p><strong>11/TCP,UDP</strong> - SYSTAT — выдаёт список активных пользователей в операционной системе.</p>
+			<p><strong>13/TCP,UDP</strong> - DAYTIME — предназначен для тестирования связи путём получения от сервера текущих даты и времени в текстовом виде.</p>
+			<p><strong>17/TCP,UDP</strong> - QOTD (Quote of the Day).</p>
+			<p><strong>18/TCP,UDP</strong> - MSP (Message Send Protocol).</p>
+			<p><strong>19/TCP,UDP</strong> - CHARGEN (Character Generator).</p>
+			<p><strong>20/TCP</strong> - FTP-DATA — для передачи данных FTP.</p>
+			<p><strong>21/TCP</strong> - для передачи команд FTP.</p>
+			<p><strong>22/TCP,UDP</strong> - SSH (Secure SHell) — криптографический сетевой протокол для безопасной передачи данных.</p>
+			<p><strong>23/TCP,UDP</strong> - Telnet — применяется для передачи текстовых сообщений в незашифрованном виде.</p>
+			<p><strong>24/TCP,UDP</strong> - PRIV-MAIL — для использования в любых частных системах пересылки почтовых сообщений.</p>
+			<p><strong>25/TCP,UDP</strong> - SMTP (Simple Mail Transfer Protocol) — применяется для пересылки почтовых сообщений в виде незашифрованного текста.</p>
+			<p><strong>27/TCP,UDP</strong> - NSW-FE (NSW User System FE).</p>
+			<p><strong>29/TCP,UDP</strong> - MSG-ICP.</p>
+			<p><strong>31/TCP,UDP</strong> - MSG-AUTH.</p>
+			<p><strong>33/TCP,UDP</strong> - DSP (Display Support Protocol).</p>
+			<p><strong>35/TCP,UDP</strong> - PRIV-PRINT — для использования любыми частными серверами печати.</p>
+			<p><strong>37/TCP,UDP</strong> - TIME — используется для синхронизации времени (устар.).</p>
+			<p><strong>38/TCP,UDP</strong> - RAP (Route Access Protocol).</p>
+			<p><strong>39/TCP,UDP</strong> - RLP (Resource Location Protocol), протокол поиска ресурсов — служит для нахождения серверов, предоставляющих услуги верхнего уровня.</p>
+			<p><strong>41/TCP,UDP</strong> - Graphics — используется графическими модулями некоторых браузерных программ.</p>
+			<p><strong>42/TCP,UDP</strong> - NAME, NAMESERVER — ARPA Host Name Server Protocol, протокол сервера имён ARPA (устар.).</p>
+			<p><strong>43/TCP,UDP</strong> - WHOIS.</p>
+			<p><strong>44/TCP,UDP</strong> - MPM-FLAGS (Message Processing Module, Flags).</p>
+			<p><strong>45/TCP,UDP</strong> - MPM (Message Processing Module, receive).</p>
+			<p><strong>46/TCP,UDP</strong> - MPM-SND (Message Processing Module, send).</p>
+			<p><strong>47/TCP,UDP</strong> - NI-FTP.</p>
+			<p><strong>48/TCP,UDP</strong> - AUDITD (Digital Audit Daemon).</p>
+			<p><strong>49/TCP,UDP</strong> - TACACS Login Host protocol.</p>
+			<p><strong>50/TCP,UDP</strong> - RE-MAIL-CK.</p>
+			<p><strong>51/TCP,UDP</strong> - резерв; ранее — LA-MAINT (IMP Logical Address Maintenance).</p>
+			<p><strong>52/TCP,UDP</strong> - XNS-TIME (Xerox Network Services Time Protocol).</p>
+			<p><strong>53/TCP,UDP</strong> - DOMAIN (Domain Name System).</p>
+			<p><strong>54/TCP,UDP</strong> - XNS-CH (Xerox Network Services ClearingHouse).</p>
+			<p><strong>55/TCP,UDP</strong> - ISI-GL (ISI Graphics Language).</p>
+			<p><strong>56/TCP,UDP</strong> - XNS-AUTH (Xerox Network Services Authentication).</p>
+			<p><strong>57/TCP,UDP</strong> - PRIV-TERM — для любых служб, обеспечивающих терминальный доступ; ранее — MTP (Mail Transfer Protocol).</p>
+			<p><strong>58/TCP,UDP</strong> - XNS-MAIL (Xerox Network Services Mail).</p>
+			<p><strong>59/TCP,UDP</strong> - PRIV-FILE — для любых служб обработки файлов.</p>
+			<p><strong>61/TCP,UDP</strong> - NI-MAIL.</p>
+			<p><strong>62/TCP,UDP</strong> - ACAS (ACA Services).</p>
+			<p><strong>63/TCP,UDP</strong> - WHOISPP.</p>
+			<p><strong>64/TCP,UDP</strong> - COVIA.</p>
+			<p><strong>65/TCP,UDP</strong> - TACACS-DS (TACACS Database Service).</p>
+			<p><strong>66/TCP,UDP</strong> - SQL-NET.</p>
+			<p><strong>67/TCP,UDP</strong> - BOOTPS (Bootstrap Protocol Server) — для сервера, с которого выполняется загрузка бездисковых рабочих станций; также используется DHCP (Dynamic Host Configuration Protocol).</p>
+			<p><strong>68/TCP,UDP</strong> - BOOTPC (Bootstrap Protocol Client) — для клиентов бездисковых рабочих станций, загружающихся с сервера BOOTP; также используется DHCP (Dynamic Host Configuration Protocol).</p>
+			<p><strong>69/TCP,UDP</strong> - TFTP (Trivial File Transfer Protocol) — тривиальный FTP применяется, например, при установке операционной системы на большое количество компьютеров в сетях предприятий. Для этого сервер TFTP и поддержка удалённого развёртывания (UAM) включены в состав серверных ОС Windows NT4 Server и новее.</p>
+			<p><strong>70/TCP,UDP</strong> - Gopher.</p>
+			<p><strong>71/TCP,UDP</strong> - NETRJS-1 (Remote job entry Service).</p>
+			<p><strong>72/TCP,UDP</strong> - NETRJS-2 (Remote job entry Service).</p>
+			<p><strong>73/TCP,UDP</strong> - NETRJS-3 (Remote job entry Service).</p>
+			<p><strong>74/TCP,UDP</strong> - NETRJS-4 (Remote job entry Service).</p>
+			<p><strong>75/TCP,UDP</strong> - PRIV-DIAL — для любых приложений телефонного дозвона.</p>
+			<p><strong>76/TCP,UDP</strong> - DEOS (Distributed External Object Store).</p>
+			<p><strong>77/TCP,UDP</strong> - PRIV-RJE — для использования в любых службах Remote Job Entry.</p>
+			<p><strong>78/TCP,UDP</strong> - VETTCP.</p>
+			<p><strong>79/TCP,UDP</strong> - Finger.</p>
+			<p><strong>80/TCP,UDP</strong> - HTTP (HyperText Transfer Protocol); ранее — WWW.</p>
+			<p><strong>82/TCP,UDP</strong> - XFER.</p>
+			<p><strong>83/TCP,UDP</strong> - MIT-ML-DEV (MIT ML Device).</p>
+			<p><strong>84/TCP,UDP</strong> - CTF (Common Trace Facility).</p>
+			<p><strong>85/TCP,UDP</strong> - MIT-ML-DEV (MIT ML Device).</p>
+			<p><strong>86/TCP,UDP</strong> - MFCOBOL (Micro Focus Cobol).</p>
+			<p><strong>87/TCP,UDP</strong> - PRIV-TERM-L — для любых приложений, обеспечивающих терминальное соединение типа «текстовый чат» (например, аналогичных talk).</p>
+			<p><strong>88/TCP,UDP</strong> - Система аутентификации Kerberos.</p>
+			<p><strong>89/TCP,UDP</strong> - SU-MIT-TG (SU/MIT Telnet Gateway).</p>
+			<p><strong>90/TCP,UDP</strong> - DNSIX (DoD Network Security for Information eXchange) Securit Attribute Token Map.</p>
+			<p><strong>91/TCP,UDP</strong> - MIT-DOV (MIT Dover Spooler).</p>
+			<p><strong>92/TCP,UDP</strong> - NPP (Network Printing Protocol).</p>
+			<p><strong>93/TCP,UDP</strong> - DCP (Device Control Protocol).</p>
+			<p><strong>94/TCP,UDP</strong> - OBJCALL.</p>
+			<p><strong>95/TCP,UDP</strong> - SUPDUP.</p>
+			<p><strong>96/TCP,UDP</strong> - DIXIE.</p>
+			<p><strong>97/TCP,UDP</strong> - SWIFT-RVF (Swift Remote Virtural File Protocol).</p>
+			<p><strong>98/TCP,UDP</strong> - TACNEWS.</p>
+			<p><strong>99/TCP,UDP</strong> - METAGRAM.</p>
+			<p><strong>101/TCP,UDP</strong> - HOSTNAME (NIC Host Name Server).</p>
+			<p><strong>102/TCP,UDP</strong> - ISO-TSAP (Transport Service Access Point Class 0).</p>
+			<p><strong>103/TCP,UDP</strong> - GPPITNP (Genesis Point-to-Point Trans Net).</p>
+			<p><strong>104/TCP,UDP</strong> - ACR-NEMA (ACR/NEMA DICOM).</p>
+			<p><strong>105/TCP,UDP</strong> - CSO, CSNET-NS (CCSO/Mailbox Name Nameserver).</p>
+			<p><strong>106/TCP,UDP</strong> - 3COM-TSMUX.</p>
+			<p><strong>107/TCP,UDP</strong> - RTELNET (Remote Telnet Service).</p>
+			<p><strong>108/TCP,UDP</strong> - SNAGAS (SNA Gateway Access Server).</p>
+			<p><strong>109/TCP,UDP</strong> - POP2 (Post Office Protocol Version 2).</p>
+			<p><strong>110/TCP,UDP</strong> - POP3 (Post Office Protocol Version 3).</p>
+			<p><strong>111/TCP,UDP</strong> - SUNRPC (Sun Remote Procedure Call).</p>
+			<p><strong>112/TCP,UDP</strong> - MCIDAS (McIDAS Data Transmission).</p>
+			<p><strong>115/TCP,UDP</strong> - SFTP (Simple File Transfer Protocol).</p>
+			<p><strong>116/TCP,UDP</strong> - ANSANOTIFY (ANSA REX Notify).</p>
+			<p><strong>117/TCP,UDP</strong> - UUCP-PATH (UUCP Path Service).</p>
+			<p><strong>118/TCP,UDP</strong> - SQLSERV (SQL Services).</p>
+			<p><strong>119/TCP,UDP</strong> - NNTP (Network News Transfer Protocol) — используется для отправки сообщений новостных рассылок.</p>
+			<p><strong>120/TCP,UDP</strong> - CFDPTKT (RFC 1235).</p>
+			<p><strong>121/TCP,UDP</strong> - ERPC (Encore Expedited Remote Protocol Call).</p>
+			<p><strong>122/TCP,UDP</strong> - SMAKYNET.</p>
+			<p><strong>123/TCP,UDP</strong> - NTP (Network Time Protocol) — используется для синхронизации времени.</p>
+			<p><strong>124/TCP,UDP</strong> - ANSATRADER (ANSA REX Trader).</p>
+			<p><strong>125/TCP,UDP</strong> - LOCUS-MAP (Locus PC-Interface Net Map Ser).</p>
+			<p><strong>126/TCP,UDP</strong> - NXEdit; ранее — Unisys Unitary Login.</p>
+			<p><strong>127/TCP,UDP</strong> - LOCUS-CON (Locus PC-Interface Conn Server).</p>
+			<p><strong>128/TCP,UDP</strong> - GSS-XLICEN (GSS X License Verification).</p>
+			<p><strong>129/TCP,UDP</strong> - PWDGEN (Password Generator Protocol).</p>
+			<p><strong>130/TCP,UDP</strong> - CISCO-FNA (Cisco FNATIVE).</p>
+			<p><strong>131/TCP,UDP</strong> - CISCO-TNA (Cisco TNATIVE).</p>
+			<p><strong>132/TCP,UDP</strong> - CISCO-SYS (Cisco SYSMAINT).</p>
+			<p><strong>133/TCP,UDP</strong> - STATSRV (Statistics Service).</p>
+			<p><strong>134/TCP,UDP</strong> - INGRES-NET.</p>
+			<p><strong>135/TCP,UDP</strong> - EPMAP (DCE Endpoint Mapper).</p>
+			<p><strong>136/TCP,UDP</strong> - PROFILE Naming System.</p>
+			<p><strong>137/TCP,UDP</strong> - NETBIOS-NS (NetBIOS Name Service).</p>
+			<p><strong>138/TCP,UDP</strong> - NETBIOS-DGM (NetBIOS Datagram Service).</p>
+			<p><strong>139/TCP,UDP</strong> - NETBIOS-SSN (NetBIOS Session Service).</p>
+			<p><strong>140/TCP,UDP</strong> - EMFIS-DATA (EMFIS Data Service).</p>
+			<p><strong>141/TCP,UDP</strong> - EMFIS-CNTL (EMFIS Control Service).</p>
+			<p><strong>142/TCP,UDP</strong> - BL-IDM (Britton-Lee IDM).</p>
+			<p><strong>143/TCP,UDP</strong> - IMAP (Internet Message Access Protocol) — используется для получения и синхронизации сообщений электронной почты.</p>
+			<p><strong>144/TCP,UDP</strong> - UMA (Universal Management Architecture).</p>
+			<p><strong>145/TCP,UDP</strong> - UAAC.</p>
+			<p><strong>146/TCP,UDP</strong> - ISO-TP0.</p>
+			<p><strong>147/TCP,UDP</strong> - ISO-IP.</p>
+			<p><strong>148/TCP,UDP</strong> - JARGON.</p>
+			<p><strong>149/TCP,UDP</strong> - AED-512.</p>
+			<p><strong>150/TCP,UDP</strong> - SQL-NET.</p>
+			<p><strong>151/TCP,UDP</strong> - HEMS.</p>
+			<p><strong>152/TCP,UDP</strong> - BFTP (Background File Transfer Program).</p>
+			<p><strong>153/TCP,UDP</strong> - SGMP (Simple Gateway Monitoring Protocol).</p>
+			<p><strong>154/TCP,UDP</strong> - NETSC-PROD.</p>
+			<p><strong>155/TCP,UDP</strong> - NETSC-DEV.</p>
+			<p><strong>156/TCP,UDP</strong> - SQLSRV (SQL Service).</p>
+			<p><strong>157/TCP,UDP</strong> - KNET-CMP.</p>
+			<p><strong>158/TCP,UDP</strong> - PCMAIL-SRV.</p>
+			<p><strong>159/TCP,UDP</strong> - NSS-ROUTING.</p>
+			<p><strong>160/TCP,UDP</strong> - SGMP-TRAPS.</p>
+			<p><strong>161/TCP,UDP</strong> - SNMP (Simple Network Management Protocol) — используется как порт прослушивания агентами удалённого мониторинга.</p>
+			<p><strong>162/TCP,UDP</strong> - SNMPTRAP (Simple Network Management Protocol Trap) — используется как порт приёма асинхронных прерываний (traps).</p>			
+			<p><strong>163/TCP,UDP</strong>	- CMIP-MAN (CMIP/TCP Manager).</p>
+			<p><strong>164/TCP,UDP</strong>	- CMIP-AGENT (CMIP/TCP Agent).</p>
+			<p><strong>165/TCP,UDP</strong>	- XNS-COURIER (Xerox Network Services).</p>
+			<p><strong>166/TCP,UDP</strong>	- S-NET (Sirius Systems Network).</p>
+			<p><strong>167/TCP,UDP</strong>	- NAMP.</p>
+			<p><strong>168/TCP,UDP</strong>	- RSVD.</p>
+			<p><strong>169/TCP,UDP</strong>	- SEND.</p>
+			<p><strong>170/TCP,UDP</strong>	- PRINT-SRV (Network PostScript).</p>
+			<p><strong>171/TCP,UDP</strong>	- MULTIPLEX (Network Innovations Multiplex).</p>
+			<p><strong>172/TCP,UDP</strong>	- CL-1 (Network Innovations CL/1); ранее — CL/1.</p>
+			<p><strong>173/TCP,UDP</strong>	- XYPLEX-MUX.</p>
+			<p><strong>174/TCP,UDP</strong>	- MAILQ.</p>
+			<p><strong>175/TCP,UDP</strong>	- VMNET.</p>
+			<p><strong>176/TCP,UDP</strong>	- GENRAD-MUX.</p>
+			<p><strong>177/TCP,UDP</strong>	- XDMCP (X Display Manager Control Protocol).</p>
+			<p><strong>178/TCP,UDP</strong>	- NEXTSTEP (NextStep Window Server).</p>
+			<p><strong>179/TCP,UDP</strong>	- BGP (Border Gateway Protocol).</p>
+			<p><strong>180/TCP,UDP</strong>	- RIS (Intergraph).</p>
+			<p><strong>181/TCP,UDP</strong>	- UNIFY.</p>
+			<p><strong>182/TCP,UDP</strong>	- AUDIT (Unisys Audit SITP).</p>
+			<p><strong>183/TCP,UDP</strong>	- OCBINDER.</p>
+			<p><strong>184/TCP,UDP</strong>	- OCSERVER.</p>
+			<p><strong>185/TCP,UDP</strong>	- REMOTE-KIS.</p>
+			<p><strong>186/TCP,UDP</strong>	- KIS.</p>
+			<p><strong>187/TCP,UDP</strong>	- ACI (Application Communication Interface).</p>
+			<p><strong>188/TCP,UDP</strong>	- MUMPS.</p>
+			<p><strong>189/TCP,UDP</strong>	- QFT (Queued File Transport).</p>
+			<p><strong>190/TCP,UDP</strong>	- GACP (Gateway Access Control Protocol).</p>
+			<p><strong>191/TCP,UDP</strong>	- PROSPERO (Prospero Directory Service).</p>
+			<p><strong>192/TCP,UDP</strong>	- OSU-NMS (OSU Network Monitoring System).</p>
+			<p><strong>193/TCP,UDP</strong>	- SRMP (Spider Remote Monitoring Protocol).</p>
+			<p><strong>194/TCP,UDP</strong>	- IRC (Internet Relay Chat).</p>
+			<p><strong>195/TCP,UDP</strong>	- DN6-NLM-AUD (DNSIX Network Level Module Audit).</p>
+			<p><strong>196/TCP,UDP</strong>	- DN6-SMM-RED (DNSIX Session Mgt Module Audit Redir).</p>
+			<p><strong>197/TCP,UDP</strong>	- DLS (Directory Location Service).</p>
+			<p><strong>198/TCP,UDP</strong>	- DLS-MON (Directory Location Service Monitor).</p>
+			<p><strong>199/TCP,UDP</strong>	- SMUX (SNMP Unix Multiplexer).</p>
+			<p><strong>200/TCP,UDP</strong>	- SRC (IBM System Resource Controller).</p>
+			<p><strong>201/TCP,UDP</strong>	- AT-RTMP (AppleTalk Routing Maintenance).</p>
+			<p><strong>202/TCP,UDP</strong>	- AT-NBP (AppleTalk Name Binding).</p>
+			<p><strong>203/TCP,UDP</strong>	- AT-3 (AppleTalk Unused).</p>
+			<p><strong>204/TCP,UDP</strong>	- AT-ECHO (AppleTalk Echo).</p>
+			<p><strong>205/TCP,UDP</strong>	- AT-5 (AppleTalk Unused).</p>
+			<p><strong>206/TCP,UDP</strong>	- AT-ZIS (AppleTalk Zone Information).</p>
+			<p><strong>207/TCP,UDP</strong>	- AT-7 (AppleTalk Unused).</p>
+			<p><strong>208/TCP,UDP</strong>	- AT-8 (AppleTalk Unused).</p>
+			<p><strong>209/TCP,UDP</strong>	- QMTP (The Quick Mail Transfer Protocol).</p>
+			<p><strong>210/TCP,UDP</strong>	- Z39-50 (ANSI Z39.50).</p>
+			<p><strong>211/TCP,UDP</strong>	- 914C-G (Texas Instruments 914C/G Terminal).</p>
+			<p><strong>212/TCP,UDP</strong>	- ANET (ATEXSSTR).</p>
+			<p><strong>213/TCP,UDP</strong>	- IPX.</p>
+			<p><strong>214/TCP,UDP</strong>	- VMPWSCS.</p>
+			<p><strong>215/TCP,UDP</strong>	- SOFTPC (Insignia Solutions).</p>
+			<p><strong>216/TCP,UDP</strong>	- CALLIC (Computer Associates Int’l License Server).</p>
+			<p><strong>217/TCP,UDP</strong> - DBASE (dBASE Unix).</p>
+			<p><strong>218/TCP,UDP</strong> - MPP (Message Posting Protocol).</p>
+			<p><strong>219/TCP,UDP</strong> - UARPS (Unisys ARPs).</p>
+			<p><strong>220/TCP,UDP</strong> - IMAP3 (Interactive Mail Access Protocol, version 3).</p>
+			<p><strong>221/TCP,UDP</strong> - FLN-SPX (Berkeley rlogind with SPX auth).</p>
+			<p><strong>222/TCP,UDP</strong> - RSH-SPX (Berkeley rshd with SPX auth).</p>
+			<p><strong>223/TCP,UDP</strong> - CDC (Certificate Distribution Center).</p>
+			<p><strong>224/TCP,UDP</strong> - MASQDIALER.</p>
+			<p><strong>242/TCP,UDP</strong> - DIRECT.</p>
+			<p><strong>243/TCP,UDP</strong> - SUR-MEAS (Survey Measurement).</p>
+			<p><strong>244/TCP,UDP</strong> - INBUSINESS.</p>
+			<p><strong>245/TCP,UDP</strong> - LINK.</p>
+			<p><strong>246/TCP,UDP</strong> - DSP3270 (Display Systems Protocol).</p>
+			<p><strong>247/TCP,UDP</strong> - SUBNTBCST-TFTP.</p>
+			<p><strong>248/TCP,UDP</strong> - BHFHS.</p>
+			<p><strong>249/TCP,UDP</strong> - резерв.</p>
+			<p><strong>250/TCP,UDP</strong> - резерв.</p>
+			<p><strong>251/TCP,UDP</strong> - резерв.</p>
+			<p><strong>252/TCP,UDP</strong> - резерв.</p>
+			<p><strong>253/TCP,UDP</strong> - резерв.</p>
+			<p><strong>254/TCP,UDP</strong> - резерв.</p>
+			<p><strong>255/TCP,UDP</strong> - резерв.</p>
+			<p><strong>256/TCP,UDP</strong> - RAP.</p>
+			<p><strong>257/TCP,UDP</strong> - SET (Secure Electronic Transaction).</p>
+			<p><strong>259/TCP,UDP</strong> - ESRO-GEN (Efficient Short Remote Operations).</p>
+			<p><strong>260/TCP,UDP</strong> - OPENPORT.</p>
+			<p><strong>261/TCP,UDP</strong> - NSIIOPS (IIOP Name Service over TLS/SSL).</p>
+			<p><strong>262/TCP,UDP</strong> - ARCISDMS.</p>
+			<p><strong>263/TCP,UDP</strong> - HDAP.</p>
+			<p><strong>264/TCP,UDP</strong> - BGMP (Border Gateway Multicast Protocol[en]).</p>
+			<p><strong>265/TCP,UDP</strong> - X-BONE-CTL.</p>
+			<p><strong>266/TCP,UDP</strong> - SST (SCSI on ST).</p>
+			<p><strong>267/TCP,UDP</strong> - TD-SERVICE (Tobit David Service Layer).</p>
+			<p><strong>268/TCP,UDP</strong> - TD-REPLICA (Tobit David Replica).</p>
+			<p><strong>269/TCP,UDP</strong> - MANET.</p>
+			<p><strong>270/TCP</strong> - резерв.</p>
+			<p><strong>270/UDP</strong> - GIST (Q-mode encapsulation for GIST messages).</p>
+			<p><strong>271/TCP</strong> - PT-TLS (IETF Network Endpoint Assessment/NEA Posture Transport Protocol over TLS).</p>
+			<p><strong>271/UDP</strong> - резерв.</p>
+			<p><strong>280/TCP,UDP</strong> - HTTP-MGMT.</p>
+			<p><strong>281/TCP,UDP</strong> - PERSONAL-LINK.</p>
+			<p><strong>282/TCP,UDP</strong> - CABLEPORT-AX (Cable Port A/X).</p>
+			<p><strong>283/TCP,UDP</strong> - RESCAP.</p>
+			<p><strong>284/TCP,UDP</strong> - CORERJD.</p>
+			<p><strong>286/TCP,UDP</strong> - FXP (FXP Communication).</p>
+			<p><strong>287/TCP,UDP</strong> - K-BLOCK.</p>
+			<p><strong>308/TCP,UDP</strong> - NOVASTORBAKCUP (Novastor Backup).</p>
+			<p><strong>309/TCP,UDP</strong> - ENTRUSTTIME.</p>
+			<p><strong>310/TCP,UDP</strong> - BHMDS.</p>
+			<p><strong>311/TCP,UDP</strong> - ASIP-WEBADMIN (AppleShare IP WebAdmin), используется в Mac OS X Server.</p>
+			<p><strong>312/TCP,UDP</strong> - VSLMP.</p>
+			<p><strong>313/TCP,UDP</strong> - MAGENTA-LOGIC.</p>
+			<p><strong>314/TCP,UDP</strong> - OPALIS-ROBOT.</p>
+			<p><strong>315/TCP,UDP</strong> - DPSI.</p>
+			<p><strong>316/TCP,UDP</strong> - DECAUTH.</p>
+			<p><strong>317/TCP,UDP</strong> - ZANNET.</p>
+			<p><strong>318/TCP,UDP</strong> - PKIX-TIMESTAMP (PKIX Time Stamp Protocol).</p>
+			<p><strong>319/TCP,UDP</strong> - PTP-EVENT.</p>
+			<p><strong>320/TCP,UDP</strong> - PTP-GENERAL.</p>
+			<p><strong>321/TCP,UDP</strong> - PIP.</p>
+			<p><strong>322/TCP,UDP</strong> - RTSPS.</p>
+			<p><strong>323/TCP</strong> - RPKI-RTR (Resource PKI to Router Protocol).</p>
+			<p><strong>323/UDP</strong> - резерв.</p>
+			<p><strong>324/TCP</strong> - RPKI- RTR-TLS (Resource PKI to Router Protocol over TLS).</p>
+			<p><strong>324/UDP</strong> - резерв.</p>
+			<p><strong>333/TCP,UDP</strong> - TEXAR (Texar Security Port).</p>
+			<p><strong>344/TCP,UDP</strong> - PDAP (Prospero Data Access Protocol).</p>
+			<p><strong>345/TCP,UDP</strong> - PAWSERV (Perf Analysis Workbench).</p>
+			<p><strong>346/TCP,UDP</strong> - ZSERV (Zebra server).</p>
+			<p><strong>347/TCP,UDP</strong> - FATSERV (Fatmen Server).</p>
+			<p><strong>348/TCP,UDP</strong> - CSI-SGWP (Cabletron Management Protocol).</p>
+			<p><strong>349/TCP,UDP</strong> - MFTP.</p>
+			<p><strong>350/TCP,UDP</strong> - MATIP-TYPE-A (Mapping of Airline Traffic over Internet Protocol, Type A).</p>
+			<p><strong>351/TCP,UDP</strong> - MATIP-TYPE-B (Mapping of Airline Traffic over Internet Protocol, Type B).</p>
+			<p><strong>352/TCP,UDP</strong> - DTAG-STE-SB.</p>
+			<p><strong>353/TCP,UDP</strong> - NDSAUTH.</p>
+			<p><strong>354/TCP,UDP</strong> - BH611.</p>
+			<p><strong>355/TCP,UDP</strong> - DATEX-ASN.</p>
+			<p><strong>356/TCP,UDP</strong> - CLOANTO-NET-1.</p>
+			<p><strong>357/TCP,UDP</strong> - BHEVENT.</p>
+			<p><strong>358/TCP,UDP</strong> - SHRINKWRAP.</p>
+			<p><strong>359/TCP,UDP</strong> - NSRMP (Network Security Risk Management Protocol).</p>
+			<p><strong>360/TCP,UDP</strong> - SCOI2ODIALOG.</p>
+			<p><strong>361/TCP,UDP</strong> - SEMANTIX.</p>
+			<p><strong>362/TCP,UDP</strong> - SRSSEND.</p>
+			<p><strong>363/TCP,UDP</strong> - RSVP-TUNNEL.</p>
+			<p><strong>364/TCP,UDP</strong> - AURORA-CMGR.</p>
+			<p><strong>365/TCP,UDP</strong> - DTK.</p>
+			<p><strong>366/TCP,UDP</strong> - ODMR (On-Demand Mail Relay).</p>
+			<p><strong>367/TCP,UDP</strong> - MORTGAGEWARE.</p>
+			<p><strong>368/TCP,UDP</strong> - QBIKGDP.</p>
+			<p><strong>369/TCP,UDP</strong> - RPC2PORTMAP.</p>
+			<p><strong>370/TCP,UDP</strong> - CODAAUTH2.</p>
+			<p><strong>371/TCP,UDP</strong> - CLEARCASE.</p>
+			<p><strong>372/TCP,UDP</strong> - ULISTPROC (ListProcessor).</p>
+			<p><strong>373/TCP,UDP</strong> - LEGENT-1 (Legent Corporation).</p>
+			<p><strong>374/TCP,UDP</strong> - LEGENT-2 (Legent Corporation).</p>
+			<p><strong>375/TCP,UDP</strong> - HASSLE.</p>
+			<p><strong>376/TCP,UDP</strong> - NIP (Amiga Envoy Network Inquiry Proto).</p>
+			<p><strong>377/TCP,UDP</strong> - TNETOS (NEC Corporation).</p>
+			<p><strong>378/TCP,UDP</strong> - DSETOS (NEC Corporation).</p>
+			<p><strong>379/TCP,UDP</strong> - IS99C (TIA/EIA/IS-99 modem client).</p>
+			<p><strong>380/TCP,UDP</strong> - IS99S (TIA/EIA/IS-99 modem server).</p>
+			<p><strong>381/TCP,UDP</strong> - HP-COLLECTOR (Hewlett-Packard performance data collector).</p>
+			<p><strong>382/TCP,UDP</strong> - HP-MANAGED-NODE (Hewlett-Packard performance data managed node).</p>
+			<p><strong>383/TCP,UDP</strong> - HP-ALARM-MGR (Hewlett-Packard data alarm manager).</p>
+			<p><strong>384/TCP,UDP</strong> - ARNS (A Remote Network Server System).</p>
+			<p><strong>385/TCP,UDP</strong> - IBM-APP (IBM Application).</p>
+			<p><strong>386/TCP,UDP</strong> - ASA (ASA Message Router Object Def.).</p>
+			<p><strong>387/TCP,UDP</strong> - AURP (AppleTalk Update-based Routing Protocol).</p>
+			<p><strong>388/TCP,UDP</strong> - UNIDATA-LDM.</p>
+			<p><strong>389/TCP,UDP</strong> - LDAP (Lightweight Directory Access Protocol).</p>
+			<p><strong>390/TCP,UDP</strong> - UIS.</p>
+			<p><strong>391/TCP,UDP</strong> - SYNOTICS-RELAY (SynOptics SNMP Relay Port).</p>
+			<p><strong>392/TCP,UDP</strong> - SYNOTICS-BROKER (SynOptics Port Broker Port).</p>
+			<p><strong>393/TCP,UDP</strong> - META5.</p>
+			<p><strong>394/TCP,UDP</strong> - EMBL-NDT (EMBL Nucleic Data Transfer).</p>
+			<p><strong>395/TCP,UDP</strong> - NETCP (NetScout Control Protocol).</p>
+			<p><strong>396/TCP,UDP</strong> - NETWARE-IP (Novell Netware over IP).</p>
+			<p><strong>397/TCP,UDP</strong> - MPTN (Multi Protocol Trans. Net.).</p>
+			<p><strong>398/TCP,UDP</strong> - KRYPTOLAN.</p>
+			<p><strong>399/TCP,UDP</strong> - ISO-TSAP-C2 (ISO Transport Class 2 Non-Control over TCP).</p>
+			<p><strong>400/TCP,UDP</strong> - OSB-SD (Oracle Secure Backup).</p>
+			<p><strong>401/TCP,UDP</strong> - UPS (Uninterruptible Power Supply).</p>
+			<p><strong>402/TCP,UDP</strong> - GENIE.</p>
+			<p><strong>403/TCP,UDP</strong> - DECAP.</p>
+			<p><strong>404/TCP,UDP</strong> - NCED.</p>
+			<p><strong>405/TCP,UDP</strong> - NCLD.</p>
+			<p><strong>406/TCP,UDP</strong> - IMSP (Interactive Mail Support Protocol).</p>
+			<p><strong>407/TCP,UDP</strong> - TIMBUKTU.</p>
+			<p><strong>408/TCP,UDP</strong> - PRM-SM (Prospero Resource Manager — System Management).</p>
+			<p><strong>409/TCP,UDP</strong> - PRM-NM (Prospero Resource Manager — Node Management).</p>
+			<p><strong>410/TCP,UDP</strong> - DECLADEBUG (DECLadebug Remote Debug Protocol).</p>
+			<p><strong>411/TCP,UDP</strong> - RMT (Remote MT Protocol).</p>
+			<p><strong>412/TCP,UDP</strong> - SYNOPTICS-TRAP (Trap Convention Port).</p>
+			<p><strong>413/TCP,UDP</strong> - SMSP (Storage Management Services Protocol).</p>
+			<p><strong>414/TCP,UDP</strong> - INFOSEEK.</p>
+			<p><strong>415/TCP,UDP</strong> - BNET.</p>
+			<p><strong>416/TCP,UDP</strong> - SILVERPLATTER.</p>
+			<p><strong>417/TCP,UDP</strong> - ONMUX.</p>
+			<p><strong>418/TCP,UDP</strong> - HYPER-G.</p>
+			<p><strong>419/TCP,UDP</strong> - ARIEL1.</p>
+			<p><strong>420/TCP,UDP</strong> - SMPTE.</p>
+			<p><strong>421/TCP,UDP</strong> - ARIEL2.</p>
+			<p><strong>422/TCP,UDP</strong> - ARIEL3.</p>
+			<p><strong>423/TCP,UDP</strong> - OPC-JOB-START (IBM Operations Planning and Control Start).</p>
+			<p><strong>424/TCP,UDP</strong> - OPC-JOB-TRACK (IBM Operations Planning and Control Track).</p>
+			<p><strong>425/TCP,UDP</strong> - ICAD.</p>
+			<p><strong>426/TCP,UDP</strong> - SMARTDSP.</p>
+			<p><strong>427/TCP,UDP</strong> - SVRLOC (SLP, Service Location Protocol).</p>
+			<p><strong>428/TCP,UDP</strong> - OCS-CMU.</p>
+			<p><strong>429/TCP,UDP</strong> - OCS-AMU.</p>
+			<p><strong>430/TCP,UDP</strong> - UTMPSD.</p>
+			<p><strong>431/TCP,UDP</strong> - UTMPCD.</p>
+			<p><strong>432/TCP,UDP</strong> - IASD.</p>
+			<p><strong>433/TCP,UDP</strong> - NNSP.</p>
+			<p><strong>434/TCP,UDP</strong> - MOBILEIP-AGENT.</p>
+			<p><strong>435/TCP,UDP</strong> - MOBILIP-MN.</p>
+			<p><strong>436/TCP,UDP</strong> - DNA-CML.</p>
+			<p><strong>437/TCP,UDP</strong> - COMSCM.</p>
+			<p><strong>438/TCP,UDP</strong> - DSFGW.</p>
+			<p><strong>439/TCP,UDP</strong> - DASP.</p>
+			<p><strong>440/TCP,UDP</strong> - SGCP.</p>
+			<p><strong>441/TCP,UDP</strong> - DECVMS-SYSMGT.</p>
+			<p><strong>442/TCP,UDP</strong> - CVC-HOSTD.</p>
+			<p><strong>443/TCP,UDP</strong> - HTTPS (HyperText Transfer Protocol Secure) — HTTP с шифрованием по SSL или TLS.</p>
+			<p><strong>444/TCP,UDP</strong> - SNPP (Simple Network Paging Protocol[en])[10].</p>
+			<p><strong>445/TCP,UDP</strong> - MICROSOFT-DS — используется в Microsoft Windows 2000 и поздних версий для прямого TCP/IP-доступа без использования NetBIOS (например, в Active Directory).</p>
+			<p><strong>446/TCP,UDP</strong> - DDM-RDB (DDM-Remote Relational Database Access).</p>
+			<p><strong>447/TCP,UDP</strong> - DDM-DFM (DDM-Distributed File Management).</p>
+			<p><strong>448/TCP,UDP</strong> - DDM-SSL (DDM-Remote DB Access Using Secure Sockets).</p>
+			<p><strong>449/TCP,UDP</strong> - AS-SERVERMAP (AS Server Mapper).</p>
+			<p><strong>450/TCP,UDP</strong> - TSERVER (Computer Supported Telecomunication Applications).</p>
+			<p><strong>451/TCP,UDP</strong> - SFS-SMP-NET (Cray Network Semaphore server).</p>
+			<p><strong>452/TCP,UDP</strong> - SFS-CONFIG (Cray SFS config server).</p>
+			<p><strong>453/TCP,UDP</strong> - CREATIVESERVER.</p>
+			<p><strong>454/TCP,UDP</strong> - CONTENTSERVER.</p>
+			<p><strong>455/TCP,UDP</strong> - CREATIVEPARTNR.</p>
+			<p><strong>456/TCP</strong> - MACON - TCP.</p>
+			<p><strong>456/UDP</strong> - MACON- UDP.</p>
+			<p><strong>457/TCP,UDP</strong> - SCOHELP.</p>
+			<p><strong>458/TCP,UDP</strong> - APPLEQTC (Apple QuickTime Conferencing).</p>
+			<p><strong>459/TCP,UDP</strong> - AMPR-RCMD.</p>
+			<p><strong>460/TCP,UDP</strong> - SKRONK.</p>
+			<p><strong>461/TCP,UDP</strong> - DATASURFSRV.</p>
+			<p><strong>462/TCP,UDP</strong> - DATASURFSRVSEC.</p>
+			<p><strong>463/TCP,UDP</strong> - ALPES.</p>
+			<p><strong>464/TCP,UDP</strong> - KPASSWD (Kerberos Change/Set password).</p>
+			<p><strong>465/TCP	URD</strong> - (URL Rendezvous Directory), для Cisco Source Specific Multicast (SSM).</p>
+			<p><strong>465/UDP</strong> - IGMPV3LITE - (IGMP Version 3 Lite), для Cisco Source Specific Multicast (SSM).</p>
+			<p><strong>466/TCP,UDP</strong> - DIGITAL-VRC.</p>
+			<p><strong>467/TCP,UDP</strong> - MYLEX-MAPD.</p>
+			<p><strong>468/TCP,UDP</strong> - PHOTURIS.</p>
+			<p><strong>469/TCP,UDP</strong> - RCP (Radio Control Protocol).</p>
+			<p><strong>470/TCP,UDP</strong> - SCX-PROXY.</p>
+			<p><strong>471/TCP,UDP</strong> - MONDEX.</p>
+			<p><strong>472/TCP,UDP</strong> - LJK-LOGIN.</p>
+			<p><strong>473/TCP,UDP</strong> - HYBRID-POP.</p>
+			<p><strong>474/TCP,UDP</strong> - TN-TL-W1.</p>
+			<p><strong>475/TCP,UDP</strong> - TCPNETHASPSRV (HASP services, TCP/IP version).</p>
+			<p><strong>476/TCP,UDP</strong> - TN-TL-FD1.</p>
+			<p><strong>477/TCP,UDP</strong> - SS7NS.</p>
+			<p><strong>478/TCP,UDP</strong> - SPSC.</p>
+			<p><strong>479/TCP,UDP</strong> - IAFDBASE.</p>
+			<p><strong>480/TCP,UDP</strong> - IAFDBASE.</p>
+			<p><strong>481/TCP,UDP</strong> - PH (Ph service).</p>
+			<p><strong>482/TCP,UDP</strong> - BGS-NSI.</p>
+			<p><strong>483/TCP,UDP</strong> - ULPNET.</p>
+			<p><strong>484/TCP,UDP</strong> - INTEGRA-SME.</p>
+			<p><strong>485/TCP,UDP</strong> - POWERBURST.</p>
+			<p><strong>486/TCP,UDP</strong> - AVIAN.</p>
+			<p><strong>487/TCP,UDP</strong> - SAFT (Simple Asynchronous File Transfer).</p>
+			<p><strong>488/TCP,UDP</strong> - GSS-HTTP.</p>
+			<p><strong>489/TCP,UDP</strong> - NEST-PROTOCOL.</p>
+			<p><strong>490/TCP,UDP</strong> - MICOM-PFS.</p>
+			<p><strong>491/TCP,UDP</strong> - GO-LOGIN.</p>
+			<p><strong>492/TCP,UDP</strong> - TICF-1 (Transport Independent Convergence for FNA).</p>
+			<p><strong>493/TCP,UDP</strong> - TICF-2 (Transport Independent Convergence for FNA).</p>
+			<p><strong>494/TCP,UDP</strong> - POV-RAY.</p>
+			<p><strong>495/TCP,UDP</strong> - INTECOURIER.</p>
+			<p><strong>496/TCP,UDP</strong> - PIM-RP-DISC.</p>
+			<p><strong>497/TCP</strong> - RETROSPECT - для службы архивации и восстановления Retrospect.</p>
+			<p><strong>498/TCP,UDP</strong> - SIAM.</p>
+			<p><strong>499/TCP,UDP</strong> - ISO-ILL.</p>
+			<p><strong>500/TCP,UDP</strong> - ISAKMP (Internet Security Association and Key Management Protocol?!).</p>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

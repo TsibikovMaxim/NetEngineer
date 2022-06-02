@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Условия ввода света и его распределение в волокне</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Условия ввода света и его распределение в волокне</h3>
+
+		<p>Условия ввода света определяют распределение оптической мощности в сердечнике волокна.</p>
+
+		<p>Идеальным вводом светового излучения считается равномерное распределение его по всему сердечнику. Фактически в многомодовом оптоволокне условие ввода может характеризоваться как незаполненное и переполненное (underfilled, overfilled).</p>
+
+		<center><img src="../../../../images/line/optical-fiber/theory/item-4.1.png"></center>
+
+		<p>Режим характеризуются как незаполненный когда большая часть оптической мощности концентрируется в центре волокна, размер светового пятна и его угловое распределение меньше диаметра срдцевины (например, когда источником является лазер [VCSEL]).</p>
+
+		<center><img src="../../../../images/line/optical-fiber/theory/item-4.2.png"></center>
+
+		<p>Переполненный режим возникает когда размер светового пятна и его угловое распределение больше чем сердечник оптоволокна (например, когда источник света светодиод [LED]). Свет выходящий за пределы сердцевины теряется.</p>
+
+		<p>При измерениях затухания с разными источниками света в незаполненном режиме отображаются значение меньше фактического, а переполненном больше.</p>
+
+		<p><strong>Незаполненный и переполненный — какой режим чучше?</strong></p>
+
+		<p>Ни незаполненный режим ни переполненный не оптимален потому что оба вносят вариацию в измерения</p>
+
+		<p>Погрешность эта не критична в общей доле пропускной способности, но важно знать её диапазон при точной оценке. В случае отклонения в 50 процентов эта вариация может поставить под сомнение оценку сети. По требованию 61280-4-1 Международной электротехнической комиссии (IEC) вариация при измерении затухании должна лежать пределах ±10%.</p>
+
+		<p>Согласно IEC 61280-4-1 испытательное оборудование должно гарантировать, что измеренное затухание варьируется менее чем ±10% для более 1 дБ затухания и ± 0.07 дБ при менее 1 дБ затухания для всех измерительных приборов.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

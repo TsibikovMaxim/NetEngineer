@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>SCCP</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>SCCP</h3>
+
+		<p><strong>SCCP</strong> — Skinny Client Control Protocol, корпоративный (проприетарный) протокол, разработан Selsius Corporation, в настоящее время принадлежит Cisco Systems Inc., которая приобрела на него права с покупкой Selsius Corporation в 1998 году. В качестве напоминания о Selsius во всех современных Cisco IP-телефонах дефолтное название устройства для регистрации в CallManager начинается с SEP—это Selsius Ethernet Phone—после которых следует MAC-адрес.</p>
+
+		<p>SCCP определяет набор сообщений между Skinny-клиентом для взаимодействия проводных и беспроводных IP-телефонов Cisco 7900 серии, таких как Cisco 7960, 7940, 7920, с сервером голосовой почты Cisco Unity и Cisco CallManager. Последний обеспечивает сигнализацию не только SCCP но и большинству VoIP протоколов — H.323, SIP, и MGCP.</p>
+
+		<p>Кроме стандартных сигнальных функций управления вызовами, обеспечиваемых Skinny, потребовались дополнительные расширенные опции, такие как: перевод звонка (трансфер), перехват звонка (пикап), конференции и сообщения голосовой почты. Все эти опции были невозможны при использовании чистого Skinny протокола, что и послужило причиной создания SCCP, поэтому его называют иногда расширенным Skinny.</p>
+
+		<p>Skinny использует TCP/IP как транспортный протокол для сигнализации вызовов и контроля соединения, и RTP/UDP/IP в качестве медиа — real time audio.</p>
+
+		<p>SCCP поддерживается некоторыми сторонними производителями оборудования и программного обеспечения, например — Symbol Technologies, IPBlue и SocketIP. Skinny/SCCP используется также в платформах с открытым кодом — Asterisk IP-PBX.</p>
+
+		<hr><h3>Список сообщений SCCP</h3>
+
+		<p>0x0000 - Keep Alive Message</p>
+		<p>0x0001 - Station Register Message</p>
+		<p>0x0002 - Station IP Port Message</p>
+		<p>0x0003 - Station Key Pad Button Message</p>
+		<p>0x0004 - Station Enbloc Call Message</p>
+		<p>0x0005 - Station Stimulus Message</p>
+		<p>0x0006 - Station Off Hook Message</p>
+		<p>0x0007 - Station On Hook Message</p>
+		<p>0x0008 - Station Hook Flash Message</p>
+		<p>0x0009 - Station Forward Status Request Message</p>
+		<p>0x11	- Station Media Port List Message</p>
+		<p>0x000A	Station Speed Dial Status Request Message</p>
+		<p>0x000B - Station Line Status Request Message</p>
+		<p>0x000C - Station Configuration Status Request Message</p>
+		<p>0x000D - Station Time Date Request Message</p>
+		<p>0x000E - Station Button Template Request Message</p>
+		<p>0x000F - Station Version Request Message</p>
+		<p>0x0010 - Station Capabilities Response Message</p>
+		<p>0x0012 - Station Server Request Message</p>
+		<p>0x0020 - Station Alarm Message</p>
+		<p>0x0021 - Station Multicast Media Reception Ack Message</p>
+		<p>0x0024 - Station Off Hook With Calling Party Number Message</p>
+		<p>0x22	- Station Open Receive Channel Ack Message</p>
+		<p>0x23	- Station Connection Statistics Response Message</p>
+		<p>0x25	- Station Soft Key Template Request Message</p>
+		<p>0x26	- Station Soft Key Set Request Message</p>
+		<p>0x27	- Station Soft Key Event Message</p>
+		<p>0x28	- Station Unregister Message</p>
+		<p>0x0081 - Station Keep Alive Message</p>
+		<p>0x0082 - Station Start Tone Message</p>
+		<p>0x0083 - Station Stop Tone Message</p>
+		<p>0x0085 - Station Set Ringer Message</p>
+		<p>0x0086 - Station Set Lamp Message</p>
+		<p>0x0087 - Station Set Hook Flash Detect Message</p>
+		<p>0x0088 - Station Set Speaker Mode Message</p>
+		<p>0x0089 - Station Set Microphone Mode Message</p>
+		<p>0x008A - Station Start Media Transmission</p>
+		<p>0x008B - Station Stop Media Transmission</p>
+		<p>0x008F - Station Call Information Message</p>
+		<p>0x009D - Station Register Reject Message</p>
+		<p>0x009F - Station Reset Message</p>
+		<p>0x0090 - Station Forward Status Message</p>
+		<p>0x0091 - Station Speed Dial Status Message</p>
+		<p>0x0092 - Station Line Status Message</p>
+		<p>0x0093 - Station Configuration Status Message</p>
+		<p>0x0094 - Station Define Time & Date Message</p>
+		<p>0x0095 - Station Start Session Transmission Message</p>
+		<p>0x0096 - Station Stop Session Transmission Message</p>
+		<p>0x0097 - Station Button Template Message</p>
+		<p>0x0098 - Station Version Message</p>
+		<p>0x0099 - Station Display Text Message</p>
+		<p>0x009A - Station Clear Display Message</p>
+		<p>0x009B - Station Capabilities Request Message</p>
+		<p>0x009C - Station Enunciator Command Message</p>
+		<p>0x009E - Station Server Respond Message</p>
+		<p>0x0101 - Station Start Multicast Media Reception Message</p>
+		<p>0x0102 - Station Start Multicast Media Transmission Message</p>
+		<p>0x0103 - Station Stop Multicast Media Reception Message</p>
+		<p>0x0104 - Station Stop Multicast Media Transmission Message</p>
+		<p>0x105 - Station Open Receive Channel Message</p>
+		<p>0x0106 - Station Close Receive Channel Message</p>
+		<p>0x107 - Station Connection Statistics Request Message</p>
+		<p>0x0108 - Station Soft Key Template Respond Message</p>
+		<p>0x109 - Station Soft Key Set Respond Message</p>
+		<p>0x0110 - Station Select Soft Keys Message</p>
+		<p>0x0111 - Station Call State Message</p>
+		<p>0x0112 - Station Display Prompt Message</p>
+		<p>0x0113 - Station Clear Prompt Message</p>
+		<p>0x0114 - Station Display Notify Message</p>
+		<p>0x0115 - Station Clear Notify Message</p>
+		<p>0x0116 - Station Activate Call Plane Message</p>
+		<p>0x0117 - Station Deactivate Call Plane Message</p>
+		<p>0x118 - Station Unregister Ack Message</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

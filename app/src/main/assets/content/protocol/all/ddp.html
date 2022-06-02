@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>DDP</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>DDP</h3>
+
+		<p>Основным протоколом сетевого уровня AppleTalk является <strong>Протокол доставки дейтаграмм (DDP)</strong>. DDP обеспечивает обслуживание без установления соединения между сетевыми гнездами. Гнезда могут назначаться либо статистически, либо динамически. Адреса AppleTalk, назначаемые DDP, состоят из 2 компонентов: 16-битового номера сети (network number) и 8-битового номера узла (node number). Эти два компонента обычно записываются в виде десятичных номеров, разделенных точкой (например, 10.1 означает сеть 10, узел 1). Если номер сети и номер узла дополнены 8-битовым гнездом (socket), обозначающим какой-нибудь особый процесс, то это означает, что в сети задан какой-нибудь уникальный процесс.</p>
+
+		<p>AppleTalk Phase II делает различие между нерасширенными (nоnextended) и расширенными (extended) сетями. В нерасширенных сетях, таких как LocalTalk, номер каждого узла AppleTalk уникален. Нерасширенные сети были единственным типом сети, определенным в AppleTalk Phase I. В расширенных сетях, таких как EtherTalk и TokenTalk, уникальной является комбинация номер каждой сети/номер узла.</p>
+
+		<p>Зоны определяются управляющим сети AppleTalk в процессе конфигурации роутера. Каждый узел AppleTalk принадлежит к отдельной конкретной зоне. Расширенные сети могут иметь несколько зон, которые ассоциируются с ними. Узлы в расширенных сетях могут принадлежать к любой отдельной зоне, которая ассоциируется с этой расширенной сетью.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

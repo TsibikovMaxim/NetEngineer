@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>AFP</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>AFP</h3>
+
+		<p><strong>AFP</strong> (Apple Filing Protocol, «AppleShare», часть подсистемы Apple File Service, AFS) — сетевой протокол представительского и прикладного уровней сетевой модели OSI, предоставляющий доступ к файлам в Mac OS X. Он поддерживает Юникод-совместимые имена файлов, ограничения файлов POSIX и ACL, расширенную блокировку файлов. До Mac OS 9 протокол был основным протоколом передачи файлов под Mac OS.</p>
+
+		<p>Сторонние реализации протокола AFP (AFS) доступны для операционных систем Windows, Novell NetWare, Linux и FreeNAS.</p>
+
+		<p>Начиная с OS X версии 10.9 "Mavericks" (2013 год), Apple использует SMB2 вместо AFP в качестве основного протокола удалённого доступа к файлам.</p>
+
+		<hr><h3>История</h3>
+
+		<p>Ранние версии сервера AFP были доступны в Mac OS начиная с версии System 6 в AppleShare и AppleShare IP, также в Mac OS X Server 1.x. В клиентских ОС AFP называется «Personal File Sharing» и поддерживает до десяти подключений. Эта AFP-реализация опирается на протокол версии 1.х или 2.х. AppleShare IP-5.х, 6.х, а релиз Mac OS X Server «1.x» представил протокол версии 2.2. Это была первая версия, которая предоставляла транспортные связи по стеку протоколов TCP/IP, также увеличен максимальный размер «расшаренных» файлов с 2 ГиБ до 4 ТиБ, но максимальный размер файла, который может храниться, остался равным 2 ГиБ в связи с ограничением в Mac OS.</p>
+		Изменения, внесённые в AFP начиная с версии 3.0, представляют собой значительный прогресс в протоколе, предоставляя функции, разработанные специально для клиентов Mac OS X.
+
+		<p>AFP 3.1 был введён в Mac OS X Server версии 10.2. Включена поддержка аутентификации Kerberos и безопасные соединения AFP через Secure Shell (SSH). Максимальный размер «расшаренных файлов» и размер файла увеличен до 8 ТиБ начиная с Mac OS X Server 10.2, а затем до 16 ТиБ в Mac OS X Server 10.3.</p>
+
+		<p>AFP 3.2 добавлена поддержка списков контроля доступа и расширенные атрибуты в Mac OS X Server 10.4. Максимальный размер «расшаренных» файлов составляет не менее 16 ТиБ, хотя компания Apple не сообщала о пределах в Mac OS X Server 10.4. Также AFP 3.2 была введена в Mac OS X Leopard и исправлена поддержка Time Machine (синхронизация, методы защиты информации и уведомления в режиме сна).</p>
+
+		<p>AFP 3.3 добавленная поддержка воспроизведения кэш (требуется для Time Machine).</p>
+
+		<p>Дальнейшие обновления AFP протокола описаны в документации разработчика.</p>
+
+		<hr><h3>Совместимость</h3>
+
+		<p>AFP версий 3 и более поздние используют исключительно TCP/IP (номера портов 548 или 427) для передачи данных и поддерживают AppleTalk только в качестве протокола обнаружения. Версии AFP 2.x поддерживают работу как через TCP/IP (используя Data Stream Interface) так и через AppleTalk. Более ранние версии протокола могут использовать только AppleTalk.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

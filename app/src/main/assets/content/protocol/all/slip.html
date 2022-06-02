@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>SLIP</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>SLIP</h3>
+
+		<p><strong>SLIP</strong> (Serial Line Internet Protocol) — устаревший сетевой протокол канального уровня эталонной сетевой модели OSI для доступа к сетям стека TCP/IP через низкоскоростные линии связи путём простой инкапсуляции IP-пакетов. Используются коммутируемые соединения через последовательные порты для соединений клиент-сервер типа точка-точка. В настоящее время вместо него используют более совершенный протокол PPP.></p>
+
+		<hr><h3>История</h3>
+
+		<p>SLIP был разработан в начале 80-х компанией 3COM. Протокол начал быстро распространяться после включения в ОС Berkeley Unix 4.2 Риком Адамсом (Rick Adams) в 1984, так как благодаря ему стало возможным подключение к Интернет через последовательный COM-порт, имевшийся на большинстве компьютеров. Ввиду своей простоты сейчас используется в микроконтроллерах.</p>
+
+		<hr><h3>Принципы работы</h3>
+
+		<ul>
+			<li>Для установления связи необходимо заранее задать IP-адреса, так как в протоколе SLIP нет системы обмена адресной информацией.</li>
+			<li>В принимаемом потоке бит SLIP позволяет определить признаки начала и конца пакета IP. По этим признакам SLIP собирает полноценные пакеты IP и передаёт верхнему уровню. При отправлении IP-пакетов происходит обратная операция — они переформатируются и посимвольно отправляются получателю через последовательную линию.</li>
+			<li>Для передачи необходимо использовать конкретную конфигурацию UART: 8 бит данных (8 data bits), без контроля четности (no parity), аппаратное управление каналом передачи (EIA hardware flow control) или трёхпроводный нуль-модемный кабель (3-wire null-modem — CLOCAL mode).</li>
+		</ul>
+
+		<hr><h3>Структура кадров</h3>
+
+		<p>Так как передача данных в последовательных асинхронных линиях связи байт-ориентированная, сначала IP-пакет разбивается на байты (октеты). Границей SLIP-кадра является уникальный флаг END (0xC0). Уникальность этого флага поддерживается байт-стаффингом (byte stuffing) внутри кадра с ESC-последовательностью 0xDB, причём байт END (0xС0) заменяется последовательностью (0xDB, 0xDC), а байт ESC (0xDB) — последовательностью (0xDB, 0xDD).</p>
+
+		<hr><h3>Недостатки</h3>
+
+		<ul>
+			<li>Нет возможности обмениваться адресной информацией — необходимость предустановки IP-адресов.</li>
+			<li>Отсутствие индикации типа инкапсулируемого протокола — возможно использование только IP.</li>
+			<li>Не предусмотрена коррекция ошибок — необходимо выполнять на верхних уровнях, рекомендуется использовать протокол TCP.</li>
+			<li>Высокая избыточность — из-за использования стартовых и стоповых битов при асинхронной передаче (+20 %), передачи в каждом SLIP-кадре полного IP-заголовка (+20 байт) и полных заголовков верхних уровней, байт-стаффинга.</li>
+			<li>В некоторых реализациях протокола максимальный размер кадра ограничен 1006 байтами для достижения обратной совместимости с реализацией в Berkeley Unix.</li>
+		</ul>
+
+		<hr><h3>CSLIP</h3>
+
+		<p>Сетевой протокол CSLIP (Compressed SLIP) — немного усовершенствованный Ван Якобсоном (Van Jacobsen из Lawrence Berkeley Labs) протокол SLIP. Изменения коснулись сжатия IP-заголовков и TCP-заголовков. 40 байт этих двух заголовков могут сжиматься до 3-5 байт. CSLIP даёт заметный выигрыш против SLIP только при использовании небольших пакетов и хороших линий связи, так как при необходимости повтора передачи в CSLIP заново переданы будут все пакеты, вплоть до последнего переданного несжатого, против одного пакета в SLIP.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

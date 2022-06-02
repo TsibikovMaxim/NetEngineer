@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>X.25</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>X.25</h3>
+
+		<p><strong>X.25</strong> — стандарт канального уровня сетевой модели OSI. Предназначался для организации WAN на основе телефонных сетей с линиями с достаточно высокой частотой ошибок, поэтому содержит развитые механизмы коррекции ошибок. Ориентирован на работу с установлением соединений. Исторически является предшественником протокола Frame Relay.</p>
+
+		<p>X.25 обеспечивает множество независимых виртуальных каналов (Permanent Virtual Circuits, PVC и Switched Virtual Circuits, SVC) в одной линии связи, идентифицируемых в X.25-сети по идентификаторам подключения к соединению, идентификаторам логического канала (Logical Channel Identifier, LCI) или номеру логического канала (Logical Channel Number, LCN).</p>
+
+		<p>Благодаря надёжности протокола и его работе поверх телефонных сетей общего пользования X.25 широко использовался как в корпоративных сетях, так и во всемирных специализированных сетях предоставления услуг, таких как SWIFT (банковская платёжная система, прекратили использование в 2005 году) и SITA (фр. Société Internationale de Télécommunications Aéronautiques — система информационного обслуживания воздушного транспорта), однако в настоящее время X.25 вытесняется другими технологиями канального уровня (Frame Relay, ISDN, ATM) и протоколом IP, оставаясь, однако, достаточно распространённым в странах и территориях с неразвитой телекоммуникационной инфраструктурой.</p>
+
+		<p>MTU для X.25 равно 576 байт. Также это число считается минимальным размером дейтаграммы, которую должен уметь принять и обработать любой хост в интернете.</p>
+
+		<hr><h3>Архитектура</h3>
+
+		<center><img src="../../../images/protocol/x251.png"></center>
+
+		<hr><h3>Режимы и типы пакетов X.25</h3>
+
+		<ol>
+			<li>Режим установления соединения (Call setup mode) используется при установлении соединения SVC между DTE-устройствами. В этом режиме на уровне PLP используется схема адресации X.121 для установления виртуального соединения. Режим установления соединения работает на уровне виртуальных каналов, то есть в пределах одного физического DTE-устройства одни SVC могут быть в состоянии установления соединения, а другие — в режиме передачи данных или разрыва соединения. Режим установления соединения используется только в случае установления SVC, но не PVC.</li>
+			<li>Режим передачи данных (Data transfer mode) используется при передаче данных по виртуальному каналу. При этом X.25 PLP ответственен за сегментацию данных в пакеты и сборку пакетов, управление передачей данных и коррекцию ошибок. Режим передачи данных работает на уровне виртуальных каналов и используется в случае как SVC, так и PVC.</li>
+			<li>Режим ожидания (Idle mode) характеризуется отсутствием передачи данных при установленном виртуальном канале. Работает на уровне виртуальных каналов и используется только в случае установления SVC, но не PVC.</li>
+			<li>Режим разрыва соединения (Call clearing mode) используется при разрыве соединения SVC между DTE-устройствами. Работает на уровне виртуальных каналов и используется только в случае разрыва SVC, но не PVC.</li>
+			<li>Режим перезапуска (Restarting mode) используется для переустановки соединений между DTE-устройством и локально работающих с ним DCE-устройствами. В отличие от других режимов, выполняется в пределах одного физического DTE-устройства, что сопровождается разрывом всех виртуальных каналов, установленных с этим DTE.</li>
+		</ol>
+
+		<center><img src="../../../images/protocol/x252.png"></center>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

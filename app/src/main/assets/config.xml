@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns        = "http://www.w3.org/ns/widgets"
+		xmlns:gap    = "http://phonegap.com/ns/1.0"
+		id           = "network.engineer"
+		versionCode  = "9"
+		version      = "1.8">
+
+	<!-- Название приложения -->
+	<name>Сетевой инженер</name>
+
+	<!-- Описание приложения -->
+	<description>Приложение является справочным пособием для IT-специалистов, инженеров и системных администраторов.</description>
+
+	<!-- Автор приложения -->
+	<author href="https://artemsannikov.ru" email="k.novoded@gmail.com">
+		Кирилл Новодед
+	</author>
+
+	<!-- ###Иконки для платформы Android### -->
+	<platform name="android">
+		<icon density="ldpi" src="res/icons/android/ldpi.png"/>
+		<icon density="mdpi" src="res/icons/android/mdpi.png"/>
+		<icon density="hdpi" src="res/icons/android/hdpi.png"/>
+		<icon density="xhdpi" src="res/icons/android/xhdpi.png"/>
+		<icon density="xxhdpi" src="res/icons/android/xxhdpi.png"/>
+		<icon density="xxxhdpi" src="res/icons/android/xxxhdpi.png"/>
+	</platform>
+
+	<!-- Стартовая страница -->
+	<content src="index.html"></content>
+
+	<!-- ###Разрешения### -->
+	<preference name="permissions" value="none"/>
+
+	<!-- Версия API  -->
+	<!--<preference name="android-minSdkVersion" value="19">-->
+	<preference name="android-targetSdkVersion" value="26" />
+
+	<!-- разрешение для переноса приложения на SD карту -->
+	<preference name="android-installLocation" value="auto" />
+
+	<!--<preference name="fullscreen" value="true" />-->
+
+	<!-- разрешить воспроизведение медиафайлов html5 -->
+	<preference name="AllowInlineMediaPlayback" value="true" />
+
+	<!-- отмена автоматического воспроизведения -->
+	<preference name="MediaPlaybackRequiresUserAction" value="false" />
+
+	<preference name="InAppBrowserStorageEnabled" value="true" />
+
+	<!-- Доступ к web сайтам -->
+	<access origin="*" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	<allow-intent href="tel:*" />
+	<allow-intent href="sms:*" />
+	<allow-intent href="mailto:*" />
+	<allow-intent href="geo:*" />
+	<platform name="android">
+		<allow-intent href="market:*" />
+	</platform>
+
+	<!-- ###Плагины### -->
+
+	<!-- Для открытия внешних ссылок -->
+	<plugin name="cordova-plugin-whitelist" spec="1" />
+	<!-- Admob Google Cordova - Ссылка: https://github.com/appfeel/admob-google-cordova -->
+	<gap:plugin name="phonegap-admob" source="npm"/>
+
+</widget>

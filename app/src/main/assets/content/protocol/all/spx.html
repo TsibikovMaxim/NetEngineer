@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>SPX</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>SPX</h3>
+
+		<p><strong>Протокол SPX</strong> (sequenced packet exchange) — протокол транспортного уровня модели OSI в стеке протоколов IPX/SPX. Для передачи данных требуется установка соединения. Предназначен для последовательного обмена пакетами. Аналог протокола TCP из стека TCP/IP. Работает поверх протокола IPX — протокола сетевого уровня. На уровне протокола SPX достоверность (надёжность) передачи информации резко возрастает. При неверной передаче пакета выполняется его повторная передача.</p>
+
+		<p>Протокол SPX используется для гарантированной доставки пакетов в той последовательности, в которой они передавались передатчиком.</p>
+
+		<p>Стек протоколов IPX/SPX был разработан компанией «Novell» для её проприетарной сетевой ОС NetWare.</p>
+
+		<hr><h3>Использование SPX в DOS</h3>
+
+		<p>Для использования SPX под ОС DOS необходимо знать:</p>
+
+		<ul>
+			<li>формат пакета SPX (является расширением пакета IPX);</li>
+			<li>структуру блока управления SPX (совпадает с блоком управления IPX);</li>
+			<li>функции SPX.</li>
+		</ul>
+
+		<p>Основные функции драйвера SPX делятся на 5 групп:</p>
+
+		<ul>
+			<li>функция проверки загрузки драйвера SPX;</li>
+			<li>функции установления канала связи;</li>
+			<li>функции для приёма и передачи пакетов;</li>
+			<li>функции разрыва канала связи;</li>
+			<li>функция проверки состояния канала связи.</li>
+		</ul>
+
+		<hr><h3>Использование SPX в Windows</h3>
+
+		<p>Для использования SPX в ОС Windows можно воспользоваться механизмом сокетов. Сокет должен создаваться со следующими аргументами: тип — SOCK_SEQPACKET (передача пакетов с установкой соединения), протокол — NSPROTO_SPX.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

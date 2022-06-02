@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>GRE</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>GRE</h3>
+
+		<p><strong>GRE</strong> (Generic Routing Encapsulation — общая инкапсуляция маршрутов) — протокол туннелирования сетевых пакетов, разработанный компанией Cisco Systems. Его основное назначение — инкапсуляция пакетов сетевого уровня сетевой модели OSI в IP-пакеты. Номер протокола в IP — 47.</p>
+
+		<p>Туннелирование подразумевает три протокола:</p>
+
+		<ul>
+			<li>пассажир — инкапсулированный протокол (IP, CLNP, IPX, AppleTalk, DECnet Phase IV, XNS, VINES и Apollo)</li>
+			<li>протокол инкапсуляции (GRE)</li>
+			<li>транспортный протокол (UDP)</li>
+		</ul>
+
+		<hr><h3>Пример применения</h3>
+
+		<ul>
+			<li>Используется в сочетании с PPTP для создания виртуальных частных сетей.</li>
+			<li>Применяется в технологии WDS для координации действий точек доступа и контроллера WDS.</li>
+			<li>Используется в технологиях мобильного IP</li>
+		</ul>
+
+		<center><img src="../../../images/protocol/gre1.png"></center>
+
+		<p>Пример работы GRE-туннеля. Между двумя маршрутизаторами A и B находится несколько маршрутизаторов, туннель позволяет обеспечить связь между сегментами сети 192.168.1.0/24 и 192.168.3.0/24 так, как если бы маршрутизаторы A и B были соединены прямым линком</p>
+
+		<hr><h3>Пример стека протоколов</h3>
+
+		<center><img src="../../../images/protocol/gre2.png"></center>
+
+		<p>Как можно понять из схемы, инкапсуляция (не обязательно GRE) нарушает иерархию в модели OSI. Это явление можно рассматривать как разделитель между двумя стеками протоколов, где один выступает "поставщиком услуг" для другого.</p>
+
+		<hr><h3>Проблема DF-бита</h3>
+
+		<p>В связи со служебным заголовком размер передаваемых данных внутри IP-пакета через GRE-туннель уменьшается при сохранении общего размера пакета. В IP-пакете предусмотрено наличие бита DF (do not fragment), запрещающего разделение пакета на несколько при передаче через среду с меньшим размером MTU. В этом случае пакет с размером полезной области данных (англ. payload), превышающим MTU IP пакета в GRE-туннеле, отбрасывается, что приводит к потерям пакетов при существенной нагрузке (проходят пакеты малого размера, такие как SYN-пакеты TCP, ICMP-сообщения (ping), но теряются пакеты с данными в TCP-потоке (то есть, соединение рвётся)). Для решения этой проблемы рекомендуется использовать path-mtu-discovery (определение TCP MSS, то есть максимального размера IP-пакетов на всём пути) при передаче данных через GRE-туннель, чтобы избежать избыточной фрагментации или потери больших пакетов.</p>
+
+		<hr><h3>Проблема NATа</h3>
+
+		<p>Так как GRE является протоколом сетевого уровня и не использует порты (в отличие от протоколов TCP и UDP), а одним из необходимых условий работы механизма PAT является наличие «открытого» порта, то работа протокола GRE через межсетевой экран может быть затруднена.</p>
+
+		<p>Частным случаем решения проблемы для протокола PPTP является технология PPTP Passthrough, в этом случае межсетевой экран «разрешает» исходящие (клиентские) подключения из защищённой сети.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

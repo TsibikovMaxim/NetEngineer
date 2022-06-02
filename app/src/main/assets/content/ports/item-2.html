@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Порты</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>500-1000</h1>
+		<a href="../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<p><strong>Порт/Протокол</strong> - <strong>Описание</strong></p>
+		
+		<div data-filter="true" data-filter-placeholder="Номер порта.." data-insert="true">
+
+			<p><strong>501/TCP,UDP</strong> - STMF.</p>
+			<p><strong>502/TCP,UDP</strong> - ASA-APPL-PROTO.</p>
+			<p><strong>503/TCP,UDP</strong> - INTRINSA.</p>
+			<p><strong>504/TCP,UDP</strong> - CITADEL.</p>
+			<p><strong>505/TCP,UDP</strong> - MAILBOX-LM.</p>
+			<p><strong>506/TCP,UDP</strong> - OHIMSRV.</p>
+			<p><strong>507/TCP,UDP</strong> - CRS.</p>
+			<p><strong>508/TCP,UDP</strong> - XVTTP.</p>
+			<p><strong>509/TCP,UDP</strong> - SNARE.</p>
+			<p><strong>510/TCP,UDP</strong> - FCP (FirstClass Protocol).</p>
+			<p><strong>511/TCP,UDP</strong> - PASSGO.</p>
+			<p><strong>512/TCP</strong> - EXEC (Remote Process Execution).</p>
+			<p><strong>512/UDP</strong>- COMSAT (аутентификация с использованием паролей и UNIX-логинов);
+			BIFF (используется системой электронной почты для уведомления пользователей о новых сообщениях, см. biff; в настоящее время получает сообщения только от процессов, выполняющихся на той же машине).</p>
+			<p><strong>513/TCP</strong> - LOGIN — удаленный вход наподобие Telnet; автоматическая проверка подлинности выполняется на основе номеров привилегированных портов и распределённых баз данных, которые идентифицируют «домены аутентификации».</p>
+			<p><strong>513/UDP</strong> - WHO — поддержка базы данных открытых сеансов на машинах в локальной сети.</p>
+			<p><strong>514/TCP</strong> - SHELL — для выполнения команд на удалённой системе; используется в аналогах командной строки с автоматической аутентификацией (например, rsh, rcp).</p>
+			<p><strong>514/UDP</strong> - SYSLOG — доставка сообщений о происходящих в системе событиях.</p>
+			<p><strong>515/TCP,UDP</strong> - PRINTER — для служб печати, ожидающих входящие соединения (например, Line Printer Daemon).</p>
+			<p><strong>516/TCP,UDP</strong> - VIDEOTEX.</p>
+			<p><strong>517/TCP,UDP</strong> - TALK.</p>
+			<p><strong>518/TCP,UDP</strong> - NTALK.</p>
+			<p><strong>519/TCP,UDP</strong> - UTIME.</p>
+			<p><strong>520/TCP</strong> - EFS (Extended Filename Server).</p>
+			<p><strong>520/UDP</strong> - ROUTER — локальный процесс маршрутизации; используется разновидность протокола Xerox NS RIP.</p>
+			<p><strong>521/TCP,UDP</strong> - RPING.</p>
+			<p><strong>522/TCP,UDP</strong> - ULP.</p>
+			<p><strong>523/TCP,UDP</strong> - IBM-DB2.</p>
+			<p><strong>524/TCP,UDP</strong> - NCP (NetWare Core Protocol) — используется, например, для доступа к ресурсам главного сервера NetWare, синхронизации времени и т. д..</p>
+			<p><strong>525/TCP,UDP</strong> - TIMED.</p>
+			<p><strong>526/TCP,UDP</strong> - TEMPO.</p>
+			<p><strong>527/TCP,UDP</strong> - STX (Stock IXChange).</p>
+			<p><strong>528/TCP,UDP</strong> - CUSTIX (Customer IXChange).</p>
+			<p><strong>529/TCP,UDP</strong> - IRC-SERV.</p>
+			<p><strong>530/TCP,UDP</strong> - COURIER (RPC).</p>
+			<p><strong>531/TCP,UDP</strong> - CONFERENCE.</p>
+			<p><strong>532/TCP,UDP</strong> - NETNEWS.</p>
+			<p><strong>533/TCP,UDP</strong> - NETWALL.</p>
+			<p><strong>534/TCP,UDP</strong> - WINDREAM.</p>
+			<p><strong>535/TCP,UDP</strong> - IIOP.</p>
+			<p><strong>536/TCP,UDP</strong> - OPALIS-RDV.</p>
+			<p><strong>537/TCP,UDP</strong> - NMSP (Networked Media Streaming Protocol).</p>
+			<p><strong>538/TCP,UDP</strong> - GDOMAP.</p>
+			<p><strong>539/TCP,UDP</strong> - APERTUS-LDP (Apertus Technologies Load Determination).</p>
+			<p><strong>540/TCP,UDP</strong> - UUCP (Unix-to-Unix Copy Protocol).</p>
+			<p><strong>541/TCP,UDP</strong> - UUCP-RLOGIN (Unix-to-Unix Copy Protocol Remote Login).</p>
+			<p><strong>542/TCP,UDP</strong> - COMMERCE.</p>
+			<p><strong>543/TCP,UDP</strong> - KLOGIN (Kerberos login).</p>
+			<p><strong>544/TCP,UDP</strong> - KSHELL (Kerberos remote shell)</p>
+			<p><strong>545/TCP,UDP</strong> - APPLEQTCSRVR</p>
+			<p><strong>546/TCP,UDP</strong> - DHCPV6-CLIENT</p>
+			<p><strong>547/TCP,UDP</strong> - DHCPV6-SERVER</p>
+			<p><strong>548/TCP,UDP</strong> - AFPOVERTCP (Apple Filing Protocol over TCP)</p>
+			<p><strong>549/TCP,UDP</strong> - IDFP</p>
+			<p><strong>550/TCP,UDP</strong> - NEW-RWHO</p>
+			<p><strong>551/TCP,UDP</strong> - CYBERCASH (CyberCash Credit Card Protocol)</p>
+			<p><strong>552/TCP,UDP</strong> - DEVSHR-NTS</p>
+			<p><strong>553/TCP,UDP</strong> - PIRP</p>
+			<p><strong>554/TCP,UDP</strong> - RTSP (Real Time Streaming Protocol)</p>
+			<p><strong>555/TCP,UDP</strong> - DSF</p>
+			<p><strong>556/TCP,UDP</strong> - REMOTEFS (Remote File Sharing Server)</p>
+			<p><strong>557/TCP,UDP</strong> - OPENVMS-SYSIPC</p>
+			<p><strong>558/TCP,UDP</strong> - SDNSKMP</p>
+			<p><strong>559/TCP,UDP</strong> - TEEDTAP</p>
+			<p><strong>560/TCP,UDP</strong> - RMONITOR</p>
+			<p><strong>561/TCP,UDP</strong> - MONITOR</p>
+			<p><strong>562/TCP,UDP</strong> - CHSHELL</p>
+			<p><strong>563/TCP,UDP</strong> - NNTPS (Network News Transfer Protocol Secure) — NNTP с шифрованием по SSL или TLS</p>
+			<p><strong>564/TCP,UDP</strong> - 9PFS (Plan 9 File Service)</p>
+			<p><strong>565/TCP,UDP</strong> - WHOAMI</p>
+			<p><strong>566/TCP,UDP</strong> - STREETTALK</p>
+			<p><strong>567/TCP,UDP</strong> - BANYAN-RPC</p>
+			<p><strong>568/TCP,UDP</strong> - MS-SHUTTLE</p>
+			<p><strong>569/TCP,UDP</strong> - MS-ROME</p>
+			<p><strong>570/TCP,UDP</strong> - METER</p>
+			<p><strong>571/TCP,UDP</strong> - UMETER</p>
+			<p><strong>572/TCP,UDP</strong> - SONAR</p>
+			<p><strong>573/TCP,UDP</strong> - BANYAN-VIP</p>
+			<p><strong>574/TCP,UDP</strong> - FTP-AGENT (FTP Software Agent System)</p>
+			<p><strong>575/TCP,UDP</strong> - VEMMI</p>
+			<p><strong>576/TCP,UDP</strong> - IPCD</p>
+			<p><strong>577/TCP,UDP</strong> - VNAS</p>
+			<p><strong>578/TCP,UDP</strong> - IPDD</p>
+			<p><strong>579/TCP,UDP</strong> - DECBSRV</p>
+			<p><strong>580/TCP,UDP</strong> - SNTP-HEARTBEAT</p>
+			<p><strong>581/TCP,UDP</strong> - BDP (Bundle Discovery Protocol)</p>
+			<p><strong>582/TCP,UDP</strong> - SCC-SECURITY</p>
+			<p><strong>583/TCP,UDP</strong> - PHILIPS-VC (Philips Video-Conferencing)</p>
+			<p><strong>584/TCP,UDP</strong> - KEYSERVER</p>
+			<p><strong>586/TCP,UDP</strong> - PASSWORD-CHG (Password Change)</p>
+			<p><strong>587/TCP,UDP</strong> - SUBMISSION (Message Submission for Mail) — используется (SMTP)</p>
+			<p><strong>588/TCP,UDP</strong> - CAL</p>
+			<p><strong>589/TCP,UDP</strong> - EYELINK</p>
+			<p><strong>590/TCP,UDP</strong> - TNS-CML</p>
+			<p><strong>591/TCP,UDP</strong> - HTTP-ALT (HTTP Alternate, см. порт 80) — используется программой FileMaker начиная с версии 6.0</p>
+			<p><strong>592/TCP,UDP</strong> - EUDORA-SET</p>
+			<p><strong>593/TCP,UDP</strong> - HTTP-RPC-EPMAP (RPC посредством HTTP) — используется, например, службами DCOM и Microsoft Exchange Server</p>
+			<p><strong>594/TCP,UDP</strong> - TPIP</p>
+			<p><strong>595/TCP,UDP</strong> - CAB-PROTOCOL</p>
+			<p><strong>596/TCP,UDP</strong> - SMSD</p>
+			<p><strong>597/TCP,UDP</strong> - PTCNAMESERVICE (PTC Name Service)</p>
+			<p><strong>598/TCP,UDP</strong> - SCO-WEBSRVRMG3 (SCO Web Server Manager 3)</p>
+			<p><strong>599/TCP,UDP</strong> - ACP (Aeolon Core Protocol)</p>
+			<p><strong>600/TCP,UDP</strong> - IPCSERVER (Sun IPC server)</p>
+			<p><strong>601/TCP,UDP</strong> - SYSLOG-CONN — используется Reliable Syslog Service (служба надёжной доставки сообщений о происходящих в системе событиях с использованием XML-схем протокола BEEP).</p>
+			<p><strong>602/TCP,UDP</strong> - XMLRPC-BEEP (XML-RPC посредством BEEP)</p>
+			<p><strong>603/TCP,UDP</strong> - IDXP (Intrusion Detection Exchange Protocol)</p>
+			<p><strong>604/TCP,UDP</strong> - TUNNEL — используется для туннелирования протокола BEEP на прикладном уровне</p>
+			<p><strong>605/TCP,UDP</strong> - SOAP-BEEP — используется для передачи сообщений SOAP посредством протокола BEEP</p>
+			<p><strong>606/TCP,UDP</strong> - URM (Cray Unified Resource Manager)</p>
+			<p><strong>607/TCP,UDP</strong> - NQS</p>
+			<p><strong>608/TCP,UDP</strong> - SIFT-UFT (Sender-Initiated/Unsolicited File Transfer)</p>
+			<p><strong>609/TCP,UDP</strong> - NPMP-TRAP</p>
+			<p><strong>610/TCP,UDP</strong> - NPMP-LOCAL</p>
+			<p><strong>611/TCP,UDP</strong> - NPMP-GUI</p>
+			<p><strong>612/TCP,UDP</strong> - HMMP-IND (HMMP Indication)</p>
+			<p><strong>613/TCP,UDP</strong> - HMMP-OP (HMMP Operation)</p>
+			<p><strong>614/TCP,UDP</strong> - SSHELL (SSL shell)</p>
+			<p><strong>615/TCP,UDP</strong> - SCO-INETMGR (SCO Internet Configuration Manager)</p>
+			<p><strong>616/TCP,UDP</strong> - SCO-SYSMGR (SCO System Administration Server)</p>
+			<p><strong>617/TCP,UDP</strong> - SCO-DTMGR (SCO Desktop Administration Server)</p>
+			<p><strong>618/TCP,UDP</strong> - DEI-ICDA</p>
+			<p><strong>619/TCP,UDP</strong> - COMPAQ-EVM</p>
+			<p><strong>620/TCP,UDP</strong> - SCO-WEBSRVRMGR (SCO WebServer Manager)</p>
+			<p><strong>621/TCP,UDP</strong> - ESCP-IP</p>
+			<p><strong>622/TCP,UDP</strong> - COLLABORATOR</p>
+			<p><strong>623/TCP</strong> - OOB-WS-HTTP (DMTF out-of-band web services management protocol)</p>
+			<p><strong>623/UDP</strong> - ASF-RMCP (ASF Remote Management and Control Protocol)</p>
+			<p><strong>624/TCP,UDP</strong> - CRYPTOADMIN</p>
+			<p><strong>625/TCP,UDP</strong> - DEC-DLM</p>
+			<p><strong>626/TCP,UDP</strong> - ASIA</p>
+			<p><strong>627/TCP,UDP</strong> - PASSGO-TIVOLI</p>
+			<p><strong>628/TCP,UDP</strong> - QMQP</p>
+			<p><strong>629/TCP,UDP</strong> - 3COM-AMP3</p>
+			<p><strong>630/TCP,UDP</strong> - RDA</p>
+			<p><strong>631/TCP,UDP</strong> - IPP (Internet Printing Protocol)</p>
+			<p><strong>632/TCP,UDP</strong> - BMPP</p>
+			<p><strong>633/TCP,UDP</strong> - SERVSTAT (Service Status update) — для Sterling Software</p>
+			<p><strong>634/TCP,UDP</strong> - GINAD</p>
+			<p><strong>635/TCP,UDP</strong> - RLZDBASE</p>
+			<p><strong>636/TCP,UDP</strong> - LDAPS (Lightweight Directory Access Protocol Secure) — LDAP с шифрованием по SSL или TLS</p>
+			<p><strong>637/TCP,UDP</strong> - LANSERVER</p>
+			<p><strong>638/TCP,UDP</strong> - MCNS-SEC</p>
+			<p><strong>639/TCP,UDP</strong> - MSDP (Multicast Source Discovery Protocol)</p>
+			<p><strong>640/TCP,UDP</strong> - ENTRUST-SPS</p>
+			<p><strong>641/TCP,UDP</strong> - REPCMD</p>
+			<p><strong>642/TCP,UDP</strong> - ESRO-EMSDP (v1.3)</p>
+			<p><strong>643/TCP,UDP</strong> - SANITY</p>
+			<p><strong>644/TCP,UDP</strong> - DWR</p>
+			<p><strong>645/TCP,UDP</strong> - PSSC</p>
+			<p><strong>646/TCP,UDP</strong> - LDP (Label Distribution Protocol) — используется для маршрутизации в сетях MPLS</p>
+			<p><strong>647/TCP,UDP</strong> - DHCP-FAILOVER (DHCP Failover)</p>
+			<p><strong>648/TCP,UDP</strong> - RRP (Registry Registrar Protocol)</p>
+			<p><strong>649/TCP,UDP</strong> - CADVIEW-3D</p>
+			<p><strong>650/TCP,UDP</strong> - OBEX</p>
+			<p><strong>651/TCP,UDP</strong> - IEEE-MMS</p>
+			<p><strong>652/TCP,UDP</strong> - HELLO-PORT</p>
+			<p><strong>653/TCP,UDP</strong> - REPSCMD</p>
+			<p><strong>654/TCP,UDP</strong> - AODV (Ad-hoc On-demand Distance Vector)</p>
+			<p><strong>655/TCP,UDP</strong> - TINC</p>
+			<p><strong>656/TCP,UDP</strong> - SPMP</p>
+			<p><strong>657/TCP,UDP</strong> - RMC (Remote monitoring and Control) — используется в системах IBM (AIX Integrated Virtualization Manager, Hardware Management Console) для динамической конфигурации управляемых логических разделов.</p>
+			<p><strong>658/TCP,UDP</strong> - TENFOLD</p>
+			<p><strong>660/TCP,UDP</strong> - MAC-SRVR-ADMIN (Mac OS X Server administration)</p>
+			<p><strong>661/TCP,UDP</strong> - HAP</p>
+			<p><strong>662/TCP,UDP</strong> - PFTP</p>
+			<p><strong>663/TCP,UDP</strong> - PURENOISE</p>
+			<p><strong>664/TCP</strong> - OOB-WS-HTTPS (DMTF out-of-band secure web services management protocol)</p>
+			<p><strong>664/UDP</strong> - ASF-SECURE-RMCP (ASF Secure Remote Management and Control Protocol)</p>
+			<p><strong>665/TCP,UDP</strong> - SUN-DR (SUN Remote Dynamic Reconfiguration)</p>
+			<p><strong>666/TCP,UDP</strong> - MDQS;</p>
+			<p><strong>667/TCP,UDP</strong> - DISCLOSE (campaign contribution disclosures, SDR Technologies)</p>
+			<p><strong>668/TCP,UDP</strong> - MECOMM</p>
+			<p><strong>669/TCP,UDP</strong> - MEREGISTER</p>
+			<p><strong>670/TCP,UDP</strong> - VACDSM-SWS</p>
+			<p><strong>671/TCP,UDP</strong> - VACDSM-APP</p>
+			<p><strong>672/TCP,UDP</strong> - VPPS-QUA</p>
+			<p><strong>673/TCP,UDP</strong> - CIMPLEX.</p>
+			<p><strong>674/TCP,UDP</strong> - ACAP (Application Configuration Access Protocol).</p>
+			<p><strong>675/TCP,UDP</strong> - DCTP.</p>
+			<p><strong>676/TCP,UDP</strong> - VPPS-VIA.</p>
+			<p><strong>677/TCP,UDP</strong> - VPP (Virtual Presence Protocol).</p>
+			<p><strong>678/TCP,UDP</strong> - GGF-NCP (GNU Generation Foundation NCP).</p>
+			<p><strong>679/TCP,UDP</strong> - MRM.</p>
+			<p><strong>680/TCP,UDP</strong> - ENTRUST-AAAS.</p>
+			<p><strong>681/TCP,UDP</strong> - ENTRUST-AAMS.</p>
+			<p><strong>682/TCP,UDP</strong> - XFR.</p>
+			<p><strong>683/TCP,UDP</strong> - CORBA-IIOP.</p>
+			<p><strong>684/TCP,UDP</strong> - CORBA-IIOP-SSL.</p>
+			<p><strong>685/TCP,UDP</strong> - MDC-PortMapper.</p>
+			<p><strong>686/TCP,UDP</strong> - HCP-Wismar (Hardware Control Protocol Wismar).</p>
+			<p><strong>687/TCP,UDP</strong> - ASIPREGISTRY.</p>
+			<p><strong>688/TCP,UDP</strong> - REALM-RUSD (ApplianceWare managment protocol).</p>
+			<p><strong>689/TCP,UDP</strong> - NMAP.</p>
+			<p><strong>690/TCP,UDP</strong> - VATP (Velazquez Application Transfer Protocol).</p>
+			<p><strong>691/TCP,UDP</strong> - MSEXCH-ROUTING (Microsoft Exchange Server Routing).</p>
+			<p><strong>692/TCP,UDP</strong> - Hyperwave-ISP.</p>
+			<p><strong>693/TCP,UDP</strong> - CONNENDP (almanid Connection Endpoint).</p>
+			<p><strong>694/TCP,UDP</strong> - HA-CLUSTER (Linux High Availability Cluster heartbeat).</p>
+			<p><strong>695/TCP,UDP</strong> - IEEE-MMS-SSL (IEEE Media Management System over SSL).</p>
+			<p><strong>696/TCP,UDP</strong> - RUSHD.</p>
+			<p><strong>697/TCP,UDP</strong> - UUIDGEN.</p>
+			<p><strong>698/TCP,UDP</strong> - OLSR (Optimized Link-State Routing).</p>
+			<p><strong>699/TCP,UDP</strong> - ACCESSNETWORK.</p>
+			<p><strong>700/TCP,UDP</strong> - EPP (Extensible Provisioning Protocol) — используется для управления регистрационной информацией DNS.</p>
+			<p><strong>701/TCP,UDP</strong> - LMP (Link Management Protocol].</p>
+			<p><strong>702/TCP,UDP</strong> - IRIS-BEEP (IRIS over BEEP) — используется для передачи сообщений IRIS (Internet Registry Information Service) посредством протокола BEEP.</p>
+			<p><strong>704/TCP,UDP</strong> - ELCSD (errlog copy/server daemon).</p>
+			<p><strong>705/TCP,UDP</strong> - AGENTX.</p>
+			<p><strong>706/TCP,UDP</strong> - SILC (Secure Internet Live Conferencing) — для организации безопасных аудио- и видеоконференций.</p>
+			<p><strong>707/TCP,UDP</strong> - BORLAND-DSJ.</p>
+			<p><strong>709/TCP,UDP</strong> - ENTRUST-KMSH.</p>
+			<p><strong>710/TCP,UDP</strong> - ENTRUST-ASH.</p>
+			<p><strong>711/TCP,UDP</strong> - CISCO-TDP (Cisco Tag Distribution Protocol).</p>
+			<p><strong>712/TCP,UDP</strong> - TBRPF (Topology Broadcast based on Reverse-Path Forwarding routing protocol).</p>
+			<p><strong>713/TCP,UDP</strong> - IRIS-XPC (IRIS over XPC).</p>
+			<p><strong>713/TCP,UDP</strong> - IRIS-XPCS (IRIS over XPCS).</p>
+			<p><strong>715/TCP,UDP</strong> - IRIS-LWZ.</p>
+			<p><strong>716/UDP</strong> - PANA.</p>
+			<p><strong>729/TCP,UDP</strong> - NETVIEWDM1 (IBM NetView DM/6000 Server/Client).</p>
+			<p><strong>730/TCP,UDP</strong> - NETVIEWDM2 (IBM NetView DM/6000 send/tcp).</p>
+			<p><strong>731/TCP,UDP</strong> - NETVIEWDM3 (IBM NetView DM/6000 receive/tcp).</p>
+			<p><strong>741/TCP,UDP</strong> - NETGW.</p>
+			<p><strong>742/TCP,UDP</strong> - NETRCS.</p>
+			<p><strong>744/TCP,UDP</strong> - FLEXLM (Flexible License Manager).</p>
+			<p><strong>747/TCP,UDP</strong> - FUJITSU-DEV (Fujitsu Device Control).</p>
+			<p><strong>748/TCP,UDP</strong> - RIS-CM (Russell Info Sci Calendar Manager).</p>
+			<p><strong>749/TCP,UDP</strong> - KERBEROS-ADM (Kerberos administration).</p>
+			<p><strong>750/TCP</strong> - RFILE.</p>
+			<p><strong>750/TCP</strong> - свободен.</p>
+			<p><strong>750/UDP</strong> - LOADAV.</p>
+			<p><strong>750/UDP</strong> - KERBEROS-IV (Kerberos version IV).</p>
+			<p><strong>751/TCP,UDP</strong> - PUMP.</p>
+			<p><strong>752/TCP,UDP</strong> - QRH.</p>
+			<p><strong>753/TCP,UDP</strong> - RRH (Reverse Routing Header).</p>
+			<p><strong>754/TCP,UDP</strong> - TELL.</p>
+			<p><strong>755/TCP,UDP</strong> - свободен.</p>
+			<p><strong>756/TCP,UDP</strong> - свободен.</p>
+			<p><strong>757/TCP,UDP</strong> - свободен.</p>
+			<p><strong>758/TCP,UDP</strong> - NLOGIN.</p>
+			<p><strong>759/TCP,UDP</strong> - CON.</p>
+			<p><strong>760/TCP,UDP</strong> - NS.</p>
+			<p><strong>761/TCP,UDP</strong> - RXE.</p>
+			<p><strong>762/TCP,UDP</strong> - QUOTAD.</p>
+			<p><strong>763/TCP,UDP</strong> - CYCLESERV.</p>
+			<p><strong>764/TCP,UDP</strong> - OMSERV.</p>
+			<p><strong>765/TCP,UDP</strong> - WEBSTER.</p>
+			<p><strong>766/TCP,UDP</strong> - свободен.</p>
+			<p><strong>767/TCP,UDP</strong> - PHONEBOOK.</p>
+			<p><strong>768/TCP,UDP</strong> - свободен.</p>
+			<p><strong>769/TCP,UDP</strong> - VID.</p>
+			<p><strong>770/TCP,UDP</strong> - CADLOCK.</p>
+			<p><strong>771/TCP,UDP</strong> - RTIP.</p>
+			<p><strong>772/TCP,UDP</strong> - CYCLESERV2.</p>
+			<p><strong>773/TCP</strong> - SUBMIT.</p>
+			<p><strong>773/UDP</strong> - NOTIFY.</p>
+			<p><strong>774/TCP</strong> - RPASSWD.</p>
+			<p><strong>774/UDP</strong> - ACMAINT-DBD.</p>
+			<p><strong>775/TCP</strong> - ENTOMB.</p>
+			<p><strong>775/UDP</strong> - ACMAINT-TRANSD.</p>
+			<p><strong>776/TCP,UDP</strong> - WPAGES.</p>
+			<p><strong>777/TCP,UDP</strong> - Multiling-HTTP.</p>
+			<p><strong>778/TCP,UDP</strong> - свободен.</p>
+			<p><strong>779/TCP,UDP</strong> - свободен.</p>
+			<p><strong>780/TCP,UDP</strong> - WPGS.</p>
+			<p><strong>782/TCP</strong> - используется Conserver.</p>
+			<p><strong>783/TCP</strong> - используется SpamAssassin.</p>
+			<p><strong>800/TCP</strong>,UDP - MDBS-DAEMON.</p>
+			<p><strong>801/TCP</strong>,UDP - DEVICE.</p>
+			<p><strong>810/TCP</strong> - FCP.</p>
+			<p><strong>810/UDP</strong> - FCP-UDP.</p>
+			<p><strong>828/TCP,UDP</strong> - ITM-MCELL-S.</p>
+			<p><strong>829/TCP,UDP</strong> - PKIX-3-CA-RA.</p>
+			<p><strong>830/TCP,UDP</strong> - NETCONF-SSH (NETCONF over SSH) — NETCONF через SSH.</p>
+			<p><strong>831/TCP,UDP</strong> - NETCONF-BEEP (NETCONF over BEEP) — NETCONF через BEEP.</p>
+			<p><strong>832/TCP,UDP</strong> - NETCONFSOAPHTTP (NETCONF for SOAP over HTTPS) — NETCONF через SOAP и SSH.</p>
+			<p><strong>833/TCP,UDP</strong> - NETCONFSOAPBEEP (NETCONF for SOAP over BEEP) — NETCONF через SOAP и BEEP.</p>
+			<p><strong>834—846</strong> - свободны.</p>
+			<p><strong>847/TCP,UDP</strong> - DHCP-FAILOVER2 (DHCP Failover).</p>
+			<p><strong>848/TCP,UDP</strong> - GDOI (Group Domain of Interpretation).</p>
+			<p><strong>849—859</strong> - свободны.</p>
+			<p><strong>860/TCP,UDP</strong> - ISCSI (Internet Small Computer Systems Interface).</p>
+			<p><strong>861/TCP,UDP</strong> - OWAMP-CONTROL (One-way Active Measurement Protocol Control).</p>
+			<p><strong>862/TCP,UDP</strong> - TWAMP-CONTROL (Two-way Active Measurement Protocol Control).</p>
+			<p>863—872 - свободны.</p>
+			<p><strong>873/TCP,UDP</strong> - RSYNC (Remote Synchronization) — используется rsync.</p>
+			<p><strong>874—885</strong> - свободны.</p>
+			<p><strong>886/TCP,UDP</strong> - ICLCNET-LOCATE (ICL coNETion locate server).</p>
+			<p><strong>887/TCP,UDP</strong> - ICLCNET-SVINFO (ICL coNETion server info).</p>
+			<p><strong>888/TCP,UDP</strong> - ACCESSBUILDER.</p>
+			<p><strong>97/TCP,UDP</strong> - Brocade SMI-S RPC.</p>
+			<p><strong>898/TCP,UDP</strong> - Brocade SMI-S RPC с шифрованием по SSL.</p>
+			<p><strong>900/TCP,UDP</strong> - OMGINITIALREFS.</p>
+			<p><strong>901/TCP,UDP</strong> - SMPNAMERES.</p>
+			<p><strong>902/TCP,UDP</strong> - IDEAFARM-DOOR.</p>
+			<p><strong>903/TCP,UDP</strong> - IDEAFARM-PANIC.</p>
+			<p><strong>910/TCP,UDP</strong> - KINK (Kerberized Internet Negotiation of Keys).</p>
+			<p><strong>911/TCP,UDP</strong> - XACT-BACKUP.</p>
+			<p><strong>912/TCP,UDP</strong> - APEX-MESH (Application Exchange relay to relay service).</p>
+			<p><strong>913/TCP,UDP</strong> - APEX-EDGE (Application Exchange endpoint to relay service).</p>
+			<p><strong>989/TCP,UDP</strong> - FTPS-DATA (FTP-данные с шифрованием по SSL или TLS).</p>
+			<p><strong>990/TCP,UDP</strong> - FTPS (FTP-команды с шифрованием по SSL или TLS).</p>
+			<p><strong>991/TCP,UDP</strong> - NAS (Netnews Administration System).</p>
+			<p><strong>992/TCP,UDP</strong> - TELNETS (Telnet с шифрованием по SSL или TLS).</p>
+			<p><strong>993/TCP,UDP</strong> - IMAPS (Internet Message Access Protocol с шифрованием по SSL или TLS).</p>
+			<p><strong>994/TCP,UDP</strong> - резерв; ранее — IRCS (IRC с шифрованием по SSL или TLS).</p>
+			<p><strong>995/TCP</strong> - POP3S (POP3 с шифрованием по SSL или TLS).</p>
+			<p><strong>996/TCP,UDP</strong> - VSINET.</p>
+			<p><strong>997/TCP,UDP</strong> - MAITRD.</p>
+			<p><strong>998/TCP</strong> - BUSBOY.</p>
+			<p><strong>998/UDP</strong> - PUPARP.</p>
+			<p><strong>1000/TCP,UDP</strong> - CADLOCK2.</p>
+
+		</div>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>ICMP</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>ICMP</h3>
+
+		<p><strong>ICMP</strong> (Internet Control Message Protocol — протокол межсетевых управляющих сообщений) — сетевой протокол, входящий в стек протоколов TCP/IP. В основном ICMP используется для передачи сообщений об ошибках и других исключительных ситуациях, возникших при передаче данных, например, запрашиваемая услуга недоступна, или хост, или маршрутизатор не отвечают. Также на ICMP возлагаются некоторые сервисные функции.</p>
+
+		<hr><h3>Технические подробности</h3>
+
+		<p>Протокол ICMP описал в RFC 792 от 1981 года Jon Postel (с дополнениями в RFC 950). ICMP является стандартом Интернета (входит в стандарт STD 5 вместе с IP). Хотя формально протокол использует IP (ICMP-пакеты инкапсулируются в IP пакеты), он является неотъемлемой частью IP и обязателен при реализации стека TCP/IP. Текущая версия ICMP для IPv4 называется ICMPv4. В IPv6 существует аналогичный протокол ICMPv6.</p>
+
+		<p>ICMP-сообщение строится из IP-пакетов, сгенерировавших ICMP-ответ. IP инкапсулирует соответствующее ICMP-сообщение с новым заголовком IP (чтобы отправить ICMP-сообщение обратно отправителю) и передает полученные пакеты дальше.</p>
+
+		<p>Например, каждая машина (такая, как маршрутизатор), которая перенаправляет IP-пакеты, уменьшает Time to live (TTL) поля заголовка IP на единицу, если TTL достигает 0, ICMP-сообщение о превышении TTL отправляется на источник пакета.</p>
+
+		<p>ICMP основан на протоколе IP. Каждое ICMP-сообщение инкапсулируется непосредственно в пределах одного IP-пакета, и, таким образом, как и UDP и в отличие от TCP, ICMP является т. н. «ненадежным» (не контролирующим доставку и её правильность). В отличие от UDP, где реализация надёжности возложена на ПО прикладного уровня, ICMP (в силу специфики применения) обычно не нуждается в реализации надёжной доставки. Его цели отличны от целей транспортных протоколов, таких как TCP и UDP: он, как правило, не используется для передачи и приёма данных между конечными системами. ICMP не используется непосредственно в приложениях пользователей сети (исключение составляют инструменты Ping и Traceroute). Тот же Ping, например, служит обычно как раз для проверки потерь IP-пакетов на маршруте.</p>
+
+		<hr><h3>Использование ICMP-сообщений</h3>
+
+		<p>ICMP-сообщения (тип 12) генерируются при нахождении ошибок в заголовке IP-пакета (за исключением самих ICMP-пакетов, дабы не привести к бесконечно растущему потоку ICMP-сообщений об ICMP-сообщениях).</p>
+
+		<p>ICMP-сообщения (тип 3) генерируются маршрутизатором при отсутствии маршрута к адресату.</p>
+
+		<p>Утилита Ping, служащая для проверки возможности доставки IP-пакетов, использует ICMP-сообщения с типом 8 (эхо-запрос) и 0 (эхо-ответ).</p>
+
+		<p>Утилита Traceroute, отображающая путь следования IP-пакетов, использует ICMP-сообщения с типом 11.</p>
+
+		<p>ICMP-сообщения с типом 5 используются маршрутизаторами для обновления записей в таблице маршрутизации отправителя.</p>
+
+		<p>ICMP-сообщения с типом 4 используются получателем (или маршрутизатором) для управления скоростью отправки сообщений отправителем.</p>
+
+		<hr><h3>Формат пакета ICMP</h3>
+
+		<center><img src="../../../images/protocol/icmp1.png"></center>
+
+		<center><img src="../../../images/protocol/icmp2.png"></center>
+
+		<hr><h3>Правила генерации ICMP-пакетов</h3>
+
+		<ol>
+			<li>При потере ICMP-пакета никогда не генерируется новый.</li>
+			<li>ICMP-пакеты никогда не генерируются в ответ на IP-пакеты с широковещательным или групповым адресом, чтобы не вызывать перегрузку в сети (так называемый «широковещательный шторм»).</li>
+			<li>При повреждении фрагментированного IP-пакета ICMP-сообщение отправляется только после получения первого повреждённого фрагмента, поскольку отправитель всё равно повторит передачу всего IP-пакета целиком.</li>
+		</ol>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

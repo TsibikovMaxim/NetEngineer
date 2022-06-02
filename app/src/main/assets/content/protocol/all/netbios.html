@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>NetBIOS</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>NetBIOS</h3>
+
+		<p><strong>NetBIOS</strong> (Network Basic Input/Output System) — протокол для работы в локальных сетях на персональных ЭВМ типа IBM/PC, разработан в виде интерфейса, который не зависит от фирмы-производителя. Был разработан фирмой Sytek Corporation по заказу IBM в 1983 году. Он включает в себя интерфейс сеансового уровня (англ. NetBIOS interface), в качестве транспортных протоколов использует TCP и UDP.</p>
+
+		<p>Особенностью NetBIOS является возможность его работы поверх разных протоколов, самыми распространёнными/известными из которых являются NetBEUI, IPX и стек протоколов TCP/IP; причём если старые версии Windows ориентировались на более лёгкие в реализации и менее ресурсоёмкие NetBEUI и IPX, то современные Windows ориентируются на TCP/IP. При использовании NetBEUI и IPX NetBIOS сам обеспечивает надёжность доставки данных (функциональность SPX не использовалась), а при использовании TCP/IP надёжность доставки обеспечивает TCP, за что удостоился отдельного имени «NBT».</p>
+
+		<p>Интерфейс NetBIOS представляет собой типичный интерфейс взаимодействия приложений (API) для обеспечения сетевых операций ввода-вывода и управления низлежащим транспортным протоколом. Приложения, использующие NetBIOS API интерфейс, могут работать только при наличии протокола, допускающего использование такого интерфейса.</p>
+
+		<p>NetBIOS также определяет протокол, функционирующий на сеансовом/транспортном уровнях модели OSI. Этот протокол используется протоколами нижележащих уровней, такими как NBFP (NetBEUI) и NetBT для выполнения сетевых запросов ввода-вывода и операций, описанных в стандартном интерфейсном наборе команд NetBIOS. То есть, NetBIOS сам не поддерживает выполнения файловых операций. Эта функция возлагается на протоколы нижележащих уровней, а сам NetBIOS обеспечивает только связь с этими протоколами и NetBIOS API-интерфейс.</p>
+
+		<p>Пакет NETBIOS создан для использования группой ЭВМ. Поддерживает как режим сессий (работа через соединение), так и режим дейтаграмм (без установления соединения). 16-символьные имена объектов в NETBIOS распределяются динамически. NETBIOS имеет собственную DNS, которая может взаимодействовать с интернетовской. Имя объекта при работе с NETBIOS не может начинаться с символа *.</p>
+
+		<p>Приложения могут найти через NETBIOS нужные им ресурсы, установить связь и послать или получить информацию. NETBIOS использует для службы имен порт 137, для службы дейтаграмм — порт 138, а для сессий — порт 139. Любая сессия начинается с NETBIOS-запроса, задания IP-адреса и определения TCP-порта удаленного объекта, далее следует обмен NETBIOS-сообщениями, после чего сессия закрывается. Сессия осуществляет обмен информацией между двумя NETBIOS-приложениями. Длина сообщения лежит в пределах от 0 до 131071 байт. Допустимо одновременное установление нескольких сессий между двумя объектами. При организации IP-транспорта через NETBIOS IP-дейтаграмма вкладывается в NETBIOS-пакет. Информационный обмен происходит в этом случае без установления связи между объектами. Имена NETBIOS должны содержать в себе IP-адреса. Так, часть NETBIOS-адреса может иметь вид IP.**.**.**.**, где IP указывает на тип операции (IP через Netbios), а **.**.**.** — IP-адрес. Система NETBIOS имеет собственную систему команд (call, listen, hang up, send, receive, session status, reset, cancel, adapter status, unlink, remote program load) и примитивов для работы с дейтаграммами (send datagram, send broadcast datagram, receive datagram, receive broadcast datagram). Все оконечные узлы NETBIOS делятся на три типа:</p>
+
+		<ul>
+			<li>широковещательные («b») узлы;</li>
+			<li>узлы точка-точка («p»);</li>
+			<li>узлы смешанного типа («m»).</li>
+		</ul>
+
+		<p>IP-адрес может ассоциироваться с одним из указанных типов. B-узлы устанавливают связь со своим партнером посредством широковещательных запросов. P- и M-узлы для этой цели используют netbios сервер имен (NBNS) и сервер распределения дейтаграмм (NBDD).</p>
+
+		<p>NetBIOS обеспечивает:</p>
+
+		<ul>
+			<li>регистрацию и проверку сетевых имен;</li>
+			<li>установление и разрыв соединений;</li>
+			<li>связь с подтверждением доставки информации;</li>
+			<li>связь без подтверждения доставки информации;</li>
+			<li>поддержку управления и мониторинга драйвера и сетевой карты.</li>
+		</ul>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

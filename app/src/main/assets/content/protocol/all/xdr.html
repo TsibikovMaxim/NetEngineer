@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>XDR</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>XDR</h3>
+
+		<p><strong>XDR</strong> (External Data Representation - внешнее представление данных) — международный стандарт передачи данных в Интернете, используемый в различных RFC для описания типов. XDR позволяет организовать не зависящую от платформы передачу данных между компьютерами в гетерогенных сетях.</p>
+
+		<p>External Data Representation (XDR) — это стандарт IETF с 1995 года. Он позволяет данным быть упакованными не зависящим от архитектуры способом, таким образом, данные могут передаваться между гетерогенными компьютерными системами.</p>
+
+		<ul>
+			<li>Преобразование из локального представления в XDR называется кодированием.</li>
+			<li>Преобразование из XDR в локальное представление называется декодированием.</li>
+			<li>XDR выполнен как портативная (переносная) библиотека функций между различными операционными системами и так же не зависит от транспортного уровня.</li>
+		</ul>
+
+		<p>Среди использующих XDR программ можно назвать следующие:</p>
+
+		<ul>
+			<li>Sun RPC</li>
+			<li>NetCDF</li>
+			<li>Язык программирования R</li>
+			<li>SpiderMonkey</li>
+			<li>Ganglia</li>
+			<li>Interactive Data Language (IDL)</li>
+		</ul>
+
+		<hr><h3>Типы данных в XDR</h3>
+
+		<ul>
+			<li>boolean</li>
+			<li>int (32-битное целое число)</li>
+			<li>hyper (64-битное целое число)</li>
+			<li>float</li>
+			<li>double</li>
+			<li>enumeration</li>
+			<li>structure</li>
+			<li>string</li>
+			<li>массивы фиксированной длины</li>
+			<li>массивы переменной длины</li>
+			<li>неформатированные («сырые») данные</li>
+		</ul>
+
+		<hr><h3>Мотивация использования XDR</h3>
+
+		<p>Разные компьютеры могут иметь разное внутреннее представление информации. Например, 32-битный Integer имеет 2 возможных формы представления:</p>
+
+		<ul>
+			<li>Порядок байтов от старшего к младшему (Motorola 68000)</li>
+			<li>Прямой порядок байтов (Intel 80x86)</li>
+		</ul>
+
+		<p>Для некоторых функций WinSock их аргументы (то есть, параметры функций) должны храниться в обратном порядке.</p>
+
+		<ul>
+			<li>Сервер и клиент могут обмениваться разными типами данных.</li>
+			<li>Если сервер и клиент выполняются на двух соответствующих машинах, используя разное внутреннее представление данных, то они должны согласовывать точно представление всех данных, передаваемых между ними.</li>
+			<li>Sun Microsystems разработала external data representation (XDR), который определяет представление для различных типов данных (integer, enumeration….)</li>
+			<li>XDR стал стандартом де-факто для большинства клиент-серверных приложений:</li>
+		</ul>
+
+		<p>— Программа преобразует сообщения из своего внутреннего представления в XDR для последующей передачи. Это называется кодированием. — Получатель преобразует полученное сообщение из XDR в собственное представление. Это называется декодированием.</p>
+
+		<hr><h3>Программная поддержка использования XDR</h3>
+
+		<ul>
+			<li>XDR определяет представление для каждого типа данных.</li>
+			<li>Например, 32-битный integer имеет порядок байтов от старшего к младшему.</li>
+			<li>Для содействия программистам XDR обеспечивает библиотеку стандартных программ для конвертирования представления данных.</li>
+		</ul>
+
+		<hr><h3>Посылка сообщения в XDR</h3>
+
+		<ul>
+			<li>Посылаемое сообщение может состоять из нескольких пунктов данных (items).</li>
+			<li>Например, сообщение содержит информацию о студенте. Оно состоит из трёх пунктов:</li>
+		</ul>
+		
+		<p>— имя (строка символов) -ID (целое) -совокупный GPA (floating-point number)</p>
+
+		<ul>
+			<li>Перед посылкой сообщения программа (клиент или сервер) конвертирует всю информацию пунктов из внутреннего представления в XDR.</li>
+			<li>Шаги конвертирования<ol>
+				<li>Предоставление буфера для хранения всей информации сообщения, которая должна быть послана.</li>
+				<li>Вызов xdrmem_create() для инициализации потока XDR.</li>
+			</ol></li>
+		</ul>
+
+		<p>Например: xdrmem_create() возвращает указатель на пустой поток.</p>
+
+		<ol>
+			<li>Вызов стандартной программы в XDR для преобразования каждого пункта информации. Она будет дописывать закодированную информацию в конец потока следующим образом:</li>
+		</ol>
+
+		<center><img src="../../../images/protocol/xdr.png"></center>
+
+		<ol>
+			<li>Например, конвертирование 32-битного целого:</li>
+		</ol>
+
+		<ol>
+			<li>После кодирования всех пунктов сообщения это сообщение посылается.</li>
+		</ol>
+
+		<hr><h3>Получение сообщения в XDR</h3>
+
+		<ul>
+			<li>Когда программа получает сообщение в XDR, она конвертирует каждый пункт данных в сообщении из XDR в своё внутреннее представление.</li>
+			<li>Шаги:<ol>
+				<li>Вызов xdrmem_create() для инициализации потока XDR , указав XDR_DECODE, как четвёртый аргумент.</li>
+				<li>Помещение полученного сообщения в буфер.</li>
+				<li>Вызов подходящей стандартной программы преобразования для декодирования каждого пункта данных полученного сообщения.</li>
+			</ol></li>
+		</ul>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

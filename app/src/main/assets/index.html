@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Справочник сетевого инженера</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/themes/my-theme.css" />
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- Open sidebar (left panel) on swipe -->
+	<script type="text/javascript" src="js/swipe-panel.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="home" data-theme="a">
+
+	<div data-role="header" data-position="fixed" data-position="inline">
+
+		<a href="#left-panel" data-role="button" data-icon="bars" data-iconpos="notext" data-shadow="false" data-transition="none" data-ajax="true" data-iconpos="right" class="ui-nodisc-icon transparentButton">Меню</a>
+
+		<h1>Разделы</h1>
+
+	</div>
+
+	<!-- Выезжающая панель слева -->
+	<div data-role="panel" id="left-panel" data-display="push" data-position="left" data-position-fixed="true">
+
+		<ul data-role="listview">
+
+			<li data-icon="false"><a href="content/main/about.html" data-ajax="false" data-transition="none">Информация о приложении</a></li>
+			<li data-icon="false"><a href="content/main/contact.html" data-ajax="false" data-transition="none">Контактная информация</a></li>
+
+		</ul>
+
+	</div>
+
+	<!-- Контент -->
+	<div data-role="main" class="ui-content">
+
+		<ul data-role="listview" data-inset="false">
+			<li data-icon="false">
+				<a href="content/theory/list.html" data-transition="none" data-ajax="false">
+					<img src="images/icon/theory.svg" width="56" height="56" style="padding: 12px 12px;">
+					<h2>Теоретические аспекты</h2>
+				</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="content/protocol/list.html" data-transition="none" data-ajax="false">
+					<img src="images/icon/protocol.svg" width="56" height="56" style="padding: 12px 12px;">
+					<h2>Сетевые протоколы</h2>
+				</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="content/line/list.html" data-transition="none" data-ajax="false">
+					<img src="images/icon/line.svg" width="56" height="56" style="padding: 12px 12px;">
+					<h2>Линии связи</h2>
+				</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="content/tools/list.html" data-transition="none" data-ajax="false">
+					<img src="images/icon/tools.svg" width="56" height="56" style="padding: 12px 12px;">
+					<h2>Инструменты для монтажа</h2>
+				</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="content/build/list.html" data-transition="none" data-ajax="false">
+					<img src="images/icon/build.svg" width="56" height="56" style="padding: 12px 12px;">
+					<h2>Монтажные работы</h2>
+				</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="content/cli/list.html" data-transition="none" data-ajax="false">
+					<img src="images/icon/cli.svg" width="56" height="56" style="padding: 12px 12px;">
+					<h2>Конфигурирование оборудования</h2>
+				</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="content/equipment-network/list.html" data-transition="none" data-ajax="false">
+					<img src="images/icon/equipment-network.svg" width="56" height="56" style="padding: 12px 12px;">
+					<h2>Сетевое оборудование</h2>
+				</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="content/ports/list.html" data-transition="none" data-ajax="false">
+					<img src="images/icon/ports.svg" width="56" height="56" style="padding: 12px 12px;">
+					<h2>Порты TCP/UDP</h2>
+				</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="content/electric/list.html" data-transition="none" data-ajax="false">
+					<img src="images/icon/electric.svg" width="56" height="56" style="padding: 12px 12px;">
+					<h2>Электрика</h2>
+				</a>
+			</li>
+
+			<li data-icon="false">
+				<a href="content/electronics/list.html" data-transition="none" data-ajax="false">
+					<img src="images/icon/electronics.svg" width="56" height="56" style="padding: 12px 12px;">
+					<h2>Электроника</h2>
+				</a>
+			</li>
+
+		</ul>
+
+	</div>
+
+</div>
+
+</body>
+</html>

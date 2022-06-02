@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>DCCP</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>DCCP</h3>
+
+		<p><strong>DCCP</strong> (Datagram Congestion Control Protocol) — протокол транспортного уровня модели OSI, разрабатываемый IETF. Принят в качестве стандарта в марте 2006 года. Он предоставляет механизмы для отслеживания перегрузок в сети, избегая необходимости создавать их на прикладном уровне. Этот протокол не гарантирует доставку информации в нужном порядке.</p>
+
+		<p>DCCP очень эффективен для приложений, в которых данные, пришедшие не вовремя, становятся бесполезными. Например, потоковое медиа-вещание, онлайн-игры и интернет-телефония. Главная особенность этих приложений состоит в том, что старые сообщения очень быстро становятся бесполезными, поэтому лучше получить новое сообщение, чем пытаться переслать старое. Но на данный момент большинство таких приложений самостоятельно реализовывают отслеживание перегрузок, а в качестве протокола передачи используются TCP или UDP.</p>
+
+		<p>Протокол DCCP доступен в ядре Linux с версии 2.6.14 и улучшается с каждым выпуском.</p>
+
+		<p>Для туннелирования пакетов DCCP через NAT разработан специальный протокол DCCP-UDP.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

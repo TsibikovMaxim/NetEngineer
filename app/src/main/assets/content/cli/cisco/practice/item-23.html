@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Настройка статического маршрута IPv6</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Настройка статического маршрута IPv6</h3>
+
+		<p>Статические маршруты для протокола IPv6 настраиваются при помощи команды глобальной конфигурации <strong>ipv6 route</strong>.</p>
+		<p>Статический маршрут IPv6 можно реализовать следующим образом:</p>
+		<ul>
+		<li>стандартный статический маршрут IPv6;</li>
+		<li>статический маршрут IPv6 по умолчанию;</li>
+		<li>объединённый статический маршрут IPv6;</li>
+		<li>плавающий статический маршрут IPv6 (это статические маршруты, административная дистанция которых больше, чем административная дистанция других статических маршрутов или динамических маршрутов).</li>
+		</ul>
+		<h3>Синтаксис команды</h3>
+		<blockquote><p>ipv6 route <em>ipv6-prefix/prefix-length {ipv6-address | exit-intf}</em></p></blockquote>
+		<ul>
+		<li>ipv6-prefix (адрес удалённой сети назначения, который необходимо добавить в таблицу маршрутизации);</li>
+		<li>prefix-length (длина префикса удалённой сети назначения,&nbsp; который необходимо добавить в таблицу маршрутизации);</li>
+		<li>ipv6-address (IP-маршрутизатора следующего маршрутизатора);</li>
+		<li>exit-intf (интерфейс для передачи пакетов).</li>
+		</ul>
+		<p><strong>Важно</strong>: Для того чтобы маршрутизатор мог осуществлять пересылку пакетов для IPv6, необходимо активировать одноадресную маршрутизацию командой <strong>ipv6 unicast-routing</strong>.</p>
+
+		<hr>
+
+		<p><strong>Router&gt;en</strong> //<em> Переходим в привилегированный режим EXEC</em><br>
+		<strong>Router#conf t</strong> // Переходим в глобальный режим конфигурации<br>
+		Enter configuration commands, one per line. End with CNTL/Z.<br>
+		<strong>Router(config)#ipv6 unicast-routing</strong> // <em>Активируем одноадресную маршрутизацию</em><br>
+		<strong>Router(config)#ipv6 route 2001:DB8:ACAD:2::/64 2001:DB8:ACAD:4::2</strong> // <em>Указываем статический маршрут для следующего перехода</em></p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Настройка основных параметров маршрутизатора</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Настройка основных параметров маршрутизатора</h3>
+
+		<p>Выполним настройку основных параметров маршрутизатора (router). Каждая введённая команда сопровождается комментарием.</p>
+
+		<hr>
+
+		<p><strong>Router&gt;en</strong> // Переходим в привилегированный режим EXEC<br>
+		<strong>Router#conf t</strong> // Переходим в режим глобальной конфигурации<br>
+		Enter configuration commands, one per line. End with CNTL/Z.<br>
+		<strong>Router(config)#hostname R2</strong> // Присваиваем маршрутизатору имя R2<br>
+		<strong>R2(config)#enable secret class</strong> // Устанавливаем слово — class, в качестве секретного пароля<br>
+		// Устанавливаем пароль — cisco, для консольного канала и настраиваем процедуру для входа пользователей.<br>
+		<strong>R2(config)#line console 0</strong><br>
+		<strong>R2(config-line)#password cisco</strong><br>
+		<strong>R2(config-line)#login</strong><br>
+		<strong>R2(config-line)#exit</strong><br>
+		// Устанавливаем пароль — cisco, для виртуального терминала (VTY) для каналов от 0 до 4, и настраиваем процедуру для входа пользователей<br>
+		<strong>R2(config)#line vty 0 4</strong><br>
+		<strong>R2(config-line)#password cisco</strong><br>
+		<strong>R2(config-line)#login</strong><br>
+		<strong>R2(config-line)#exit</strong><br>
+		<strong>R2(config)#service password-encryption</strong> // Выполняем процедуру шифрования всех открытых паролей<br>
+		<strong>R2(config)#banner motd #Authorized Access Only!#</strong> // Устанавливаем текст для баннера motd (уведомление о несанкционированном доступе)<br>
+		<strong>R2(config)#exit</strong><br>
+		R2#<br>
+		%SYS-5-CONFIG_I: Configured from console by console<br>
+		<strong>R2#copy running-config startup-config</strong> // Сохраняем конфигурацию<br>
+		Destination filename [startup-config]?<br>
+		Building configuration…<br>
+		[OK]</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

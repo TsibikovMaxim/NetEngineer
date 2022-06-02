@@ -1,0 +1,81 @@
+* {
+	text-shadow: none;
+	box-shadow: none;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border:1px solid #999;
+}
+	table td {
+		border:1px solid #999;
+		color: #333;
+		padding: 0 5px;
+	}
+
+img {
+	max-width:100%;
+	height:auto;
+}
+
+/*Боковая граница у выезжающего меню слева/справа*/
+.ui-panel-animate.ui-panel-open.ui-panel-position-left.ui-panel-display-push {
+	border-right: 1px solid #dddddd;
+}
+.ui-panel-animate.ui-panel-open.ui-panel-position-right.ui-panel-display-push {
+	border-left: 1px solid #dddddd;
+}
+
+/*no disk icon & transparent icon*/
+
+.transparentButton {
+	background-color: transparent !important;
+	border: 0 !important;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+	a.ui-nodisc-icon.transparentButton.ui-btn.ui-btn-a {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+	}
+
+/* Перенос слов в заголовках h2 */
+
+ul.ui-listview li h2 {
+	white-space : normal;
+	text-shadow: none;
+}
+	ul.ui-listview li a {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		text-shadow: none;		
+	}
+	ul.ui-listview li a.ui-btn:active {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		text-shadow: none;
+		border-top: 1px solid #dddddd;
+	}
+	ul.ui-listview li a.ui-btn:focus {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		background-color: #fafafa;
+		color: #333;
+		text-shadow: none;
+		border-top: 1px solid #dddddd;
+	}
+	
+.ui-listview > .ui-li-divider {
+	white-space: normal;
+}
+
+/*Стили для разделительной горизонтальной линии*/
+
+hr {
+	width: 100%;
+	height: 1px;
+	background-color: #ddd;
+	border: 0;
+}

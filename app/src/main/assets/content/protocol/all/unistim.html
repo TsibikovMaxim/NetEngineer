@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Unistim</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Unistim</h3>
+
+		<p><strong>Unistim</strong> — закрытый протокол передачи сигнальной информации компании Nortel.</p>
+
+		<p>UNIStim протокол прикладного уровня и базируется на RUDP протоколе также разработанный Nortel. Отличие RUDP от UDP наличие номера пакета и механизма повторной передачи в случае потери пакета с помощью rudp пакетов включающий ACK с указанием номера полученного UNIStim пакета и NAK с указанием номера потерянного\пропущенного UNIStim пакета. Протокол обеспечивает управление сервером тонких клиентов для VoIP. Сервер (CS1000) управляет, получает информацию о состоянии клиентов, обменивается данными с другими участниками поддерживающими протокол. Все команды поделены на несколько секций по функциональному назначению. Каждое сообщение включает 3 основных поля как то: менеджер получатель команды, длина всей команды, код команды для данного менеджера. Остальная часть сообщения зависит от типа команды.</p>
+
+		<p>Клиент, получив сообщение от сервера, выполняет запрос. В зависимости от команды клиент должен сообщить о состоянии выполненной команды. Также клиент может сообщать о своем состоянии по запросу или установленному временному промежутку. Сервер полностью управляет состоянием клиента и состоянием звонка. Задача сервера при выполнении звонка осуществить настройку 2 клиентов для открытия RTP трафика. RTP трафик клиент осуществляет самостоятельно используя различные аудио кодеки.</p>
+
+		<p>На текущий момент последняя версия протокола, который поддерживают продукты компании Nortel — UNIStim 4.0 Детали реализации протокола доступны в документе под названием «Telephony and Data Network Services at a Telephone», патент № 7068641 от 7-го мая 1999 года.</p>
+
+		<p>Список клиентов, поддерживающих протокол UNIStim: 2001, 2002, 2004, 1110E, 1120E, 1140E, 1150E. Полный список клиентов можно получить на сайте nortel.com</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>RTCP</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>RTCP</h3>
+
+		<p><strong>RTCP</strong> (англ. Real-Time Transport Control Protocol — протокол управления передачей в реальном времени) — протокол, используемый совместно с RTP. Протокол описан в RFC 3550. RTCP базируется на периодической передаче управляющих пакетов всем участникам сессии, используя тот же механизм рассылки, что и для пакетов данных.</p>
+
+		<p>Протокол RTCP используется для передачи информации о задержках и потерях медиа-пакетов, джиттер-буфере, уровне звукового сигнала. Также передаются метрика качества сигнала (Call Quality Metrics) и Echo Return Loss.</p>
+
+		<p>Определены следующие типы сообщений RTCP:</p>
+
+		<ul>
+			<li>SR - Sender Report - отчёт отправителя по отправленным медиа-пакетам RTP</li>
+			<li>RR - Receiver Report - отчёт получателя по полученным медиа-пакетам RTP</li>
+			<li>SDES - элементы описания источника, включая cname</li>
+			<li>BYE - Отмечает прекращение участия в группе</li>
+			<li>APP - Специфические функции приложения</li>
+		</ul>
+
+		<p>В рекомендации RFC 3611 определёно также сообщение XR - Extended Report, которое позволяет отправлять большее число параметров, по сравнению со стандартными отчётами, а именно:</p>
+
+		<ul>
+			<li>Время получения пакета</li>
+			<li>Порядковые номера потерянных пакетов</li>
+			<li>Порядковые номера повторяющихся пакетов</li>
+			<li>Ожидаемое время доставки</li>
+			<li>Задержка с момента приема последнего отчета RTCP Receiver Report</li>
+			<li>Общая статистика медиа-пакетов</li>
+			<li>Оценка VoIP - направления (MOS и R Factor - параметр характеризующий качество сигнала)</li>
+		</ul>
+
+		<hr><h3>Шифрование RTCP</h3>
+
+		<p>Существует вариант протокола RTP c шифрованием Secure Real-time Transport Protocol (SRTP) для обеспечения безопасной передачи данных. И так как RTP тесно связан с RTCP (Real-Time Control Protocol), который может использоваться, чтобы управлять сессией RTP, у SRTP также есть родственный протокол, названный Secure RTCP (или SRTCP). SRTCP обеспечивает те же самые функции, связанные с безопасностью в RTCP, для той же функциональности SRTP в RTP.</p>
+
+		<p>SRTCP добавляет 3 новых обязательных поля "SRTCP index", "encrypt-flag" и "authentication tag" и опциональное поле MKI в описание пакета RTCP.</p>
+
+		<p>Использование SRTP или SRTCP является необязательным при использовании RTP или RTCP, но даже если SRTP/SRTCP используются, все дополнительные возможности (такие как шифрование и установление подлинности) опциональны и могут быть включены или выключены. Единственное исключение — функция аутентификации сообщений, которая обязательна при использовании SRTCP.</p>
+
+		<p>Для шифрования медиа потока (в целях конфиденциальности голосового соединения), SRTP вместе с SRTCP стандартизируют использование только единственного шифра, AES, который может использоваться в двух режимах, превращающих изначально блочный шифр AES в потоковый шифр.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

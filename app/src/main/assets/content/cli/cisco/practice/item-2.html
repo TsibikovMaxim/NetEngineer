@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Запись MAC-адреса в рабочую конфигурацию</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Запись MAC-адреса в рабочую конфигурацию</h3>
+
+		<p>Липкий MAC-адрес постоянно хранится в конфигурации запуска. Почему он называется липким? А всё потому, что его не нужно настраивать в ручную, нужно всего лишь разрешить функции port-security обнаружить MAC-адрес устройства обычным способом. И система IOS автоматически запишет этот MAC-адрес в рабочую конфигурацию.</p>
+
+		<p>Важный момент: чтобы поправить липкий MAC-адрес, нужно будет его предварительно удалить из конфигурации при помощи команды no switchport port-security mac-address sticky [mac], а затем добавить нужный MAC.</p>
+
+		<hr>
+
+		<p><strong>Switch&gt;en</strong> // Привилегированный режим EXEC</p>
+		<p><strong>Switch#conf t</strong> // Режим глобальной конфигурации</p>
+		<p><strong>Switch(config)#int fa 0/1</strong> // Выбор интерфейса</p>
+		<p><strong>Switch(config-if)#switchport mode access</strong> // Сообщаем системе, что это абонентский порт</p>
+		<p><strong>Switch(config-if)#switchport port-security</strong> // Активируем функцию switchport port-security на интерфейсе fa 0/1</p>
+		<p><strong>Switch(config-if)#switchport port-security mac-address sticky</strong> // Указываем устройству, что нужно запомнить только один (несколько) MAC-адресов</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

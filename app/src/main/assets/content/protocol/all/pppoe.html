@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>PPPoE</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>PPPoE</h3>
+
+		<p><strong>PPPoE</strong> (англ. Point-to-point protocol over Ethernet) — сетевой протокол канального уровня (второй уровень сетевой модели OSI) передачи кадров PPP через Ethernet. В основном используется xDSL-сервисами. Предоставляет дополнительные возможности (аутентификация, сжатие данных, шифрование).</p>
+
+		<p>Стандартное MTU протокола ниже, чем на стандартном Ethernet (Ethernet — 1500 байт; PPPoE — 1492 байт), что иногда вызывает проблемы с плохо настроенными межсетевыми экранами.</p>
+
+		<p>PPPoE — это туннелирующий протокол, который позволяет настраивать (или инкапсулировать) IP или другие протоколы, которые настраиваются на PPP, через соединения Ethernet, но с программными возможностями PPP-соединений, и поэтому используется для виртуальных «звонков» на соседнюю Ethernet-машину и устанавливает соединение точку, которое используется для транспортировки IP-пакетов, работающее с возможностями PPP.</p>
+
+		<p>Это позволяет применять традиционное PPP-ориентированное ПО для настройки соединения, которое использует не последовательный канал, а пакетно-ориентированную сеть (как Ethernet), чтобы организовать классическое соединение с логином, паролем для Интернет-соединений. Также IP-адрес по другую сторону соединения назначается, только когда PPPoE-соединение открыто, допуская динамическое переиспользование IP-адресов.</p>
+
+		<p>PPPoE разработан UUNET, Redback Networks и RouterWare. Протокол описан в RFC 2516.</p>
+
+		<p>Стоит отметить, что некоторые поставщики оборудования (Cisco и Juniper, например) используют термин PPPoEoE (PPPoE over Ethernet), означающий PPPoE, работающий напрямую через Ethernet или другие IEEE 802.3 сети, а также PPPoE, работающий через связанные в Ethernet (Ethernet bridged over) ATM, для того, чтобы отличать от PPPoEoA (PPPoE over ATM), который работает на ATM virtual circuit по спецификации RFC 2684 и SNAP и инкапсулирует PPPoE. PPPoEoA — это не то же самое, что Point-to-Point Protocol over ATM (PPPoA), поскольку он не использует SNAP.</p>
+
+		<p>Работа PPPoE осуществляется следующим образом. Существует Ethernet-среда, то есть несколько соединённых сетевых карт, которые адресуются MAC-адресами. Заголовки Ethernet-кадров содержат адрес отправителя кадра, адрес получателя кадра и тип кадра. Одну из карт слушает PPPoE-сервер. Клиент посылает широковещательный Ethernet-кадр, на который должен ответить PPPoE-сервер (адрес отправителя кадра — свой MAC-адрес, адрес получателя кадра — FF:FF:FF:FF:FF:FF и тип кадра — PPPoE Active Discovery Initiation). PPPoE-сервер посылает клиенту ответ (адрес отправителя кадра — свой MAC-адрес, адрес получателя кадра — МАС-адрес клиента и тип кадра — PPPoE Active Discovery Offer). Если в сети несколько PPPoE-серверов, то все они посылают ответ. Клиент выбирает подходящий сервер и посылает ему запрос на соединение. Сервер посылает клиенту подтверждение с уникальным идентификатором сессии, все последующие кадры в сессии будут иметь этот идентификатор. Таким образом, между сервером и клиентом создается виртуальный канал, который идентифицируется идентификатором сессии и MAC-адресами клиента и сервера. Затем в этом канале устанавливается PPP-соединение, а уже в PPP-пакеты упаковывается IP-трафик.</p>
+
+		<hr><h3>Преимущества схемы</h3>
+
+		<ul>
+			<li>IP-заголовки в Ethernet-среде игнорируются. То есть пользователь может назначить IP-адрес своей сетевой карте, но это не приведет к «обвалу» сети (теоретически при работе с сетевым концентратором не должно произойти «обвала» и при смене пользователем MAC-адреса даже на адрес сервера, а при работе с сетевым коммутатором все зависит от конструкции коммутатора).</li>
+			<li>Каждое соединение отделено от других (работает в своем канале).</li>
+			<li>Настройки (IP-адрес, адрес шлюза, адреса DNS-серверов) могут передаваться сервером.</li>
+			<li>PPP-соединение легко аутентифицируется и обсчитывается (например, при помощи RADIUS).</li>
+			<li>PPP-соединение можно шифровать. Например, при работе с сетевым концентратором (когда на каждой сетевой карте может быть виден весь Ethernet-трафик) прочитать чужой IP-трафик весьма затруднительно.</li>
+		</ul>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

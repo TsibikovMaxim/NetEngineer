@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Количество MAC-адресов на порт устройства</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Количество MAC-адресов на порт устройства</h3>
+
+		<p>Иногда необходимо разрешить работу нескольких MAC-адресов на порт. Это в основном требуется для того, чтобы организовать работу двух устройств, которые будут подключены на один порт.</p>
+
+		<p>Пример: допустим у нас есть телефон Cisco и компьютер, нам нужно чтобы телефон и компьютер работали в режиме моста. В этом случае телефон будет физически подключен к порту коммутатора, а компьютер будет подключен в телефон. В этом случае в таблице MAC-адресов будет запись, которая будет содержать информацию о том, что на порту работает два устройства, то есть будет записан MAC-адрес телефона и компьютера.</p>
+
+		<hr>
+
+		<p><strong>Switch&gt;en</strong> // Привилегированный режим EXEC</p>
+		<p><strong>Switch#conf t</strong> // Режим глобальной конфигурации</p>
+		<p><strong>Switch(config)#int fa 0/1</strong> // Выбор интерфейса</p>
+		<p><strong>Switch(config-if)#switchport mode access</strong> // Сообщаем системе, что это абонентский порт</p>
+		<p><strong>Switch(config-if)#switchport port-security</strong> // Активируем функцию switchport port-security на интерфейсе fa 0/1</p>
+		<p><strong>Switch(config-if)#switchport port-security maximum 2</strong> // Устанавливаем количество активных MAC-адресов на порт устройства</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

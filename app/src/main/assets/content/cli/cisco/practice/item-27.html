@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Сброс настроек конфигурации startup-config</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Сброс настроек конфигурации startup-config</h3>
+
+		<p>Иногда необходимо выполнить сброс настроек конфигурации (startup-config) коммутатора или маршрутизатора.  Чтобы правильно реализовать сброс настроек нужно выполнить команду erase startup-config и пару сопутствующих операций.</p>
+
+		<hr>
+
+		<p><strong>R1&gt;en</strong> // <em>Переходим в привилегированный режим EXEC</em><br>
+		Password:<br>
+		<strong>R1#conf t</strong> // <em>Переходим в режим глобальной настройки</em><br>
+		Enter configuration commands, one per line. End with CNTL/Z.<br>
+		<strong>R1(config)#do erase startup-config</strong> // <em>Выполняем команду сброса</em><br>
+		<strong>Erasing the nvram filesystem will remove all configuration files! Continue? [confirm]</strong> // <em>Подтверждаем действие нажатием — Enter</em><br>
+		[OK]<br>
+		Erase of nvram: complete<br>
+		%SYS-7-NV_BLOCK_INIT: Initialized the geometry of nvram<br>
+		<strong>R1(config)#do reload</strong> // <em>Выполняем перезагрузку</em><br>
+		<strong>System configuration has been modified. Save? [yes/no]:no</strong> // <em>Отправляем — no, чтобы не сохранять текущие настройки конфигурации, которые находятся сейчас в памяти устройства (если отправите — yes, то устройство просто выполнит перезагрузку и сброс выполнен не будет)</em><br>
+		<strong>Proceed with reload? [confirm]</strong> // <em>Нажимаем — Enter, чтобы продолжить перезагрузку</em><br>
+		System Bootstrap, Version 12.1(3r)T2, RELEASE SOFTWARE (fc1)<br>
+		Copyright (c) 2000 by cisco Systems, Inc.<br>
+		Initializing memory for ECC<br>
+		..<br>
+		C2600 processor with 524288 Kbytes of main memory<br>
+		Main memory is configured to 64 bit mode with ECC enabled<br>
+		Readonly ROMMON initialized<br>
+		Self decompressing the image :<br>
+		########################################################################## [OK]<br>
+		— System Configuration Dialog —<br>
+		<strong>Would you like to enter the initial configuration dialog? [yes/no]: no</strong> // <em>Если хотите выполнить настройку устройства сейчас, то отправляйте — yes</em><br>
+		Press RETURN to get started!</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

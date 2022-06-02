@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Настройка IP-адреса для интерфейса VLAN коммутатора</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Настройка IP-адреса для интерфейса VLAN коммутатора</h3>
+
+		<p>Чтобы настроить IP-адрес для интерфейса VLAN коммутатора необходимо выполнить следующие команды interface vlan 1 и ip address в CLI.</p>
+
+		<hr>
+
+		<p><strong>S1# conf t</strong> // переходим в режим глобальной конфигурации<br>
+		<strong>S1(config)# interface vlan 1</strong> // переходим в режим конфигурирования интерфейса<br>
+		<strong>S1(config-if)# ip address 192.168.1.253 255.255.255.0</strong> // присваиваем интерфейсу ip-адрес и маску сети<br>
+		<strong>S1(config-if)# no shutdown</strong> // включаем интерфейс<br>
+		<strong>S1(config-if)# ex</strong> // выходим из режима глобальной конфигурации<br>
+		<strong>S1#</strong></p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

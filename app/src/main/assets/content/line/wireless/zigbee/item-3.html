@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Протоколы</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>Протоколы</h3>
+
+		<p>Стандарты IEEE 802.15.4 и ZigBee 2007 Specification определяют стандартизированные протоколы, которые обеспечивают сетевую инфраструктуру, необходимую для беспроводных сетевых приложений с большим числом датчиков и исполнительных механизмов.</p>
+
+		<p>IEEE 802.15.4 определяет физический и MAC уровни, а ZigBee определяет сетевой уровень и уровень приложений.</p>
+
+		<center><img src="../../../../images/line/wireless/zigbee/item-3.jpg"></center>
+
+		<p>Рисунок 1. Стек протоколов ZigBee</p>
+
+		<p><strong>Стек протоколов ZigBee</strong></p>
+
+		<p>Спецификация ZigBee регламентирует стек протоколов взаимодействия узлов сети, в котором протоколы верхних уровней используют сервисы, предоставляемые протоколами ниже лежащих уровней.</p>
+
+		<p>Уровень приложений (APL) состоит из фермы приложений (Application Framework), объекта устройства ZigBee (ZD0) и подуровня поддержки приложений (APS).</p>
+
+		<p>Ферма приложений (Application Framework ) содержит описание порядка создания профилей в стеке ZigBee, гарантирующего их совместимость, а также определяет:</p>
+
+		<ul>
+			<li>стандартные типы данных для профилей,</li>
+			<li>дескрипторы, помогающие в обнаружении служб,</li>
+			<li>форматы кадров для транспортировки данных и</li>
+			<li>значения пар ключей.</li>
+		</ul>
+
+		<p>Это позволяет быстро разрабатывать простые профили на основе атрибутов.</p>
+
+		<p><strong>Объекты приложений</strong> (Application Objects) – программные модули, управляющие устройствами ZigBee в конечных точках. Одна базовая станция ZigBee может поддерживать до 240 объектов приложений. Объекты приложений поддерживают конечные точки, пронумерованные от 1 до 240. Конечная точка 0 зарезервирована для объекта устройства ZigBee (ZD0).</p>
+
+		<p><strong>Объект устройства ZigBee</strong> (ZigBee Device Object – ZD0):</p>
+
+		<ul>
+			<li>определяет роль устройства ZigBee: координатор, маршрутизатор или конечное устройство;</li>
+			<li>инициирует запросы поиска и присоединения и/или отвечает на такие запросы;</li>
+			<li>устанавливает безопасную связь между устройствами ZigBee.</li>
+		</ul>
+
+		<p>Он также предоставляет богатый набор команд управления, определяемых в профиле устройства ZigBee (используются при вводе в эксплуатацию).</p>
+
+		<p><strong>План управления ZD0</strong> (ZD0 Management Plane) поддерживает связь ZD0 с подуровнем поддержки приложений (APS) и сетевым уровнем (NWK). Позволяет ZD0 обрабатывать запросы приложений на доступ к сети и обеспечение безопасности, используя сообщения профиля устройства ZigBee (ZigBee Device Profile – ZDP).</p>
+
+		<p><strong>Подуровень поддержки приложений</strong> (Application Support Sublayer – APS). Отвечает за предоставление данных приложениям и профилям устройства ZigBee. Подуровень также управляет присоединениями в сети ZigBee и хранит данные о таких присоединениях в своей таблице.</p>
+
+		<p><strong>Поставщик услуг безопасности</strong> (Security Service Provider – SSP) обеспечивает механизмы безопасности для уровней, использующих шифрование – NWK и APS. Инициируется и конфигурируется объектом устройства ZD0.</p>
+
+		<p><strong>Сетевой уровень</strong> (Network Layer – NWK) обрабатывает сетевые адреса и маршрутизацию по вызовам MAC уровня. В его задачи также входят:</p>
+
+		<ul>
+			<li>запуск сети (если устройство является координатором);</li>
+			<li>присвоение сетевых адресов;</li>
+			<li>добавление и удаление сетевых устройств;</li>
+			<li>маршрутизация сообщений;</li>
+			<li>применение политики безопасности;</li>
+			<li>осуществление поиска маршрутов.</li>
+		</ul>
+
+		<p><strong>Уровни, определяемые стандартом IEEE 802.15.4</strong></p>
+
+		<p><strong>Уровень управления доступом к среде</strong> (Medium Access Control Layer – MAC) отвечает за надежную связь устройства с непосредственными соседями, помогает разрешать коллизии и повышать эффективность. МАС уровень отвечает также за ассемблирование и декомпозицию кадров и пакетов данных.</p>
+
+		<p><strong>Физический уровень</strong> (Physical Layer – PHY) обеспечивает интерфейс к физической среде передачи – радио. Физический уровень состоит из двух уровней, работающих в разных диапазонах частот. Уровень, работающий при меньших частотах, покрывает диапазоны 868 МГц для Европы и 915 МГц для таких стран, как США и Австралия. Высокочастотный физический уровень работает на частоте 2,4 ГГц и применяется практически во всем мире.</p>
+
+		<p><strong>Точки доступа</strong></p>
+
+		<p>Связь между элементами стека протоколов ZigBee осуществляется через точки доступа к услугам (service access point – SAP):</p>
+
+		<ul>
+			<li>APSDE-SAP – к данным подуровня поддержки приложений;</li>
+			<li>APSME-SAP – к управлению подуровнем поддержки приложений;</li>
+			<li>APSSE-SAP – к управлению безопасностью подуровня поддержки приложений;</li>
+			<li>NLDE-SAP – к данным сетевого уровня;</li>
+			<li>NLME-SAP – к управлению сетевым уровнем;</li>
+			<li>NLSE-SAP – к управлению безопасностью сетевого уровня;</li>
+			<li>MLDE-SAP – к данным подуровня МАС;</li>
+			<li>MLME-SAP – к управлению подуровнем МАС;</li>
+			<li>PD-SAP – к данным физического уровня PHY;</li>
+			<li>PLME-SAP – к управлению физическим уровнем PHY;</li>
+			<li>RF-SAP – к трансмиттеру.</li>
+		</ul>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>

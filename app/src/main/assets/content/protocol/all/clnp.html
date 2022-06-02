@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Charset -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>CLNP</title>
+	<!-- Include meta tag to ensure proper rendering and touch zooming-->
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="../../../css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="../../../css/themes/my-theme.css" />
+	<link rel="stylesheet" href="../../../css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="../../../css/my-style.css" />
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery-1.11.3.min.js"></script>
+	<!-- Include the jQuery Mobile library -->
+	<script type="text/javascript" src="../../../js/jquery.mobile-1.4.5.min.js"></script>
+	<!-- AdMob-->
+	<script type="text/javascript" src="../../../js/admob.js"></script>
+	<!-- cordova js -->
+	<script src="../../../cordova.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="position" data-theme="a">
+
+	<div data-role="header" data-position="fixed">
+		<a data-role="button" data-rel="back" data-ajax="false" class="ui-nodisc-icon transparentButton" data-icon="carat-l" data-iconpos="notext" data-theme="a">Кнопка назад</a>
+		<h1>Описание</h1>
+		<a href="../../../index.html" data-ajax="false" class="ui-nodisc-icon transparentButton" data-role="button" data-icon="home" data-iconpos="notext" data-shadow="false" data-transition="none" data-theme="a">На главную</a>
+	</div>
+
+	<div data-role="main" class="ui-content">
+
+		<h3>CLNP</h3>
+
+		<p><strong>CLNP</strong> — бесконтактный сетевой протокол (Connection Less Network Protocol).</p>
+
+		<p>CLNP — это дейтаграммный протокол передачи данных, функционально очень похожий на протокол IP, используемый в интернете. В протоколе CLNP нет средств определения и исправления ошибок (эти функции возлагаются на транспортный уровень). Протокол CLNP не требует, чтобы канал связи был установлен перед передачей данных. CLNP отправляет сообщения их адресатам независимо от любых других сообщений.</p>
+
+		<p>CLNP используется TP4 (Transport Protocol Class 4). Однако, CLNP не используется в Интернете, так как его функция обеспечена IP протоколом, поэтому иногда его называют ISO IP (название образовано от семиуровневой модели OSI/ISO). Однако, CLNP все ещё широко используется во многих сетях передачи данных во всём мире.</p>
+
+		<p>CLNP используется IS-IS (разработанный в корпорации DEC, Digital Equipment Corporation) для маршрутизации в сетях протокола CLNP ISO. Тип CLNP поддерживает два значения: 1 и 28. 1 используется, чтобы указать «Ошибочный Отчёт». Все остальные пакеты используют значение 28 (Шестнадцатеричный 0x1c) (TP4, TAPR). У CLNP нет поля Protocol, как у IP. Поле NSEL в NSAP используется для того, чтобы ускорить доставку соответствующему блоку управления протоколом. В IP всегда предполагается, что после обнаружения ошибки из-за неправильного обращения в пакете, ошибочный пакет отправят (через ICMP) назад к источнику. PDUs CLNP (PDUs — блоки протокольных данных, эквивалентные пакетам) только выявит ошибочные отчёты, если флаг «Ошибочный Отчёт» будет установлен. Заголовок CLNP не требует, чтобы сообщения были дополнены до самой близкой границы на 32 бита. Длина заголовка сетевого протокола передачи без соединения может доходить до 254 октетов. В сообщении CLNP есть отдельные поля для того, чтобы указать полную длину и длину сегмента, что помогает при повторной сборке.</p>
+
+		<p>CLNP стандартизирован ISO 8473. TP4 стандартизирован ISO 8073.</p>
+
+	</div>
+
+</div>
+
+
+</body>
+</html>
